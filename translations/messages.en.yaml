@@ -1,0 +1,11 @@
+menu:
+  main: "Home"
+  program: "Program"
+  contacts: "Contacts"
+  register: "Register"
+
+title:
+  main: "Grain conference 2025"
+
+page:
+  conf: "Conference: "

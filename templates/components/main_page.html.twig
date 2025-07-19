@@ -1,0 +1,26 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'title.main'|trans }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="conf">{{ 'page.conf'|trans }} {{ data }}</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".conf").hide();
+            setTimeout(function() {
+                $(".conf").fadeIn(2000);
+            }, 700);
+        });
+    </script>
+{% endblock %}
