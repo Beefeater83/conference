@@ -28,7 +28,7 @@
     </div>
 
     <div class="bars" onclick="showmenu()"><img src="{{ asset('icons/bars.svg') }}" alt="bars"></div>
-    <div class="arrow fa-solid fa-arrow-up" onclick="hidemenu()"><img src="{{ asset('icons/arrow.svg') }}" alt="arrow"></div>
+    <div class="xmark" onclick="hidemenu()"><img src="{{ asset('icons/xmark.svg') }}" alt="xmark"></div>
 
     <div class="mobile">
         <div class="mobile-menu-wrapper">
@@ -67,15 +67,15 @@
                         $('.header-desktop').show();
                         $('.mobile').hide();
                         $('.bars').hide();
-                        $('.arrow').hide();
+                        $('.xmark').hide();
                     } else {
                         $('.header-desktop').hide();
                         if($('.mobile').is(':visible')){
                             $('.bars').hide();
-                            $('.arrow').show();
+                            $('.xmark').show();
                         }else{
                             $('.bars').show();
-                            $('.arrow').hide();
+                            $('.xmark').hide();
                         }
                     }
                 }
@@ -85,17 +85,17 @@
                 $(window).resize(function() {
                     handleNavigation();
                 });
-                $('.arrow').hide();
+                $('.xmark').hide();
             });
         
             function showmenu(){
             $('.mobile').show(600);
             $('.bars').hide();
-            $('.arrow').show();
+            $('.xmark').show();
             }
             function hidemenu(){
             $('.mobile').hide(600);
-            $('.arrow').hide();
+            $('.xmark').hide();
             $('.bars').show();
             }
     </script>

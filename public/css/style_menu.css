@@ -93,7 +93,7 @@ img{
     color: #fcfcfc;
 }
 
-.bars, .arrow{
+.bars, .xmark{
     position: fixed;
     right: 20px;
     top: 20px;
@@ -104,6 +104,19 @@ img{
     width: 20px;
     height: 20px;
     filter: invert(1);
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.xmark {
+    animation: rotateIn 0.5s ease-out 1;
 }
 
 .mobile > .menu{
@@ -128,7 +141,7 @@ img{
 }
 
 .mobile-menu > .menu-el {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     letter-spacing: 2px;
 }
 
