@@ -9,7 +9,7 @@
 /var/
 /vendor/
 /.idea/
-.htaccess
+
 
 composer.phar
 
