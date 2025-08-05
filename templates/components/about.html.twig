@@ -1,0 +1,44 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'title.about'|trans }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/style_about.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/button.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="about-wrapper">
+        <div class="about-side">ddddd</div>
+        <div class="about-main">
+            <div class="about-paragraph">{{ 'about_content.paragraph_one'|trans }}</div>
+            <div class="about-paragraph">{{ 'about_content.paragraph_two'|trans }}</div>
+
+            <div class="about-heading">{{ 'about_content.paragraph_three'|trans }}</div>
+
+            <div class="about-topics">
+                {% for i in 1..9 %}
+                    <div class="about-topic-item">
+                        {{ ('about_content.topic_' ~ i)|trans }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="about-main-bottom">
+                <div class="btn-wrapper">
+                    <a href="#" class="btn">
+                        <button class="btn" type="button">{{ 'about_content.button'|trans }}  >></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    </script>
+{% endblock %}

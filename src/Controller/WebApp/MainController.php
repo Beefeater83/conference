@@ -16,10 +16,17 @@ class MainController extends AbstractController
     #[Route('/{_locale}', name: 'main_page', requirements: ['_locale' => 'en|ru'], defaults: ['_locale' => 'en'], methods: ['GET'])]
     public function mainPage(Request $request): Response
     {
-        $conference = 'Grain 2025';
+    //    $conference = 'Grain 2025';
 
         return $this->render('components/main_page.html.twig', [
-            'data' => $conference
+           // 'data' => $conference
         ]);
+    }
+
+    #[Route('/{_locale}/about', name: 'about_conference', requirements: ['_locale' => 'en|ru'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    public function aboutConference(Request $request): Response
+    {
+
+        return $this->render('components/about.html.twig', []);
     }
 }
