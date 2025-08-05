@@ -4,16 +4,68 @@
 {% block title %}{{ 'title.main'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/button.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_main.css') }}">
 {% endblock %}
 
 {% block content %}
+    <div class="logo-top">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <img src="/logo/apk.svg" alt="apk">
+            </div>
+            <div class="logo">
+                <img src="/logo/soybean.svg" alt="soybean">
+            </div>
+            <div class="logo">
+                <img src="/logo/asia.svg" alt="asia">
+            </div>
+        </div>
 
-    <div class="btn-wrapper">
-        <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
-            <button class="btn" type="button">{{ 'page.about'|trans }}</button>
-        </a>
+        <div class="event-info-wrapper">
+            <div class="event-place">
+                <div class="date">NOVEMBER 5-6-7, 2025</div>
+                <div class="turkey">MERSIN, TURKEY</div>
+            </div>
+            <div class="event-logo">
+                <img src="/logo/agrofood.svg" alt="agrofood">
+            </div>
+            <div class="event-date-registration">
+                <div class="table">
+                    <div class="before-start">ДО НАЧАЛА</div>
+                    <div class="day-month-wrapper">
+                        <div class="month-wrapper">
+                            <div class="month-figure">07</div>
+                            <div class="month">МЕСЯЦЕВ</div>
+                        </div>
+                        <div class="days-wrapper">
+                            <div class="days-figure">13</div>
+                            <div class="days">ДНЕЙ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="registration">
+                    <div class="btn-wrapper">
+                        <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                            <button class="btn" type="button">РЕГИСТРАЦИЯ >></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="int-conf">INTERNATIONAL</div>
+        <div class="int-conf">CONFERENCE</div>
+    </div>
+
+    <div class="bottom-wave">
+        <div class="btn-wrapper">
+            <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                <button class="btn" type="button">{{ 'page.about'|trans }}</button>
+            </a>
+        </div>
+
     </div>
 
 {% endblock %}

@@ -2,22 +2,30 @@
     <link rel="stylesheet" href="{{ asset('css/style_menu.css') }}">
 {% endblock %}
 
-    <div class="lang-wrapper">
-        <div class="inner-lang-wrapper">
-            <div class="lang">
-                <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
-                    EN
-                </a>
+    <div class="header-desktop">
+        <div class="menu-wrapper">
+            <div class="menu">
+                <div class="menu-el menu-main">{{ 'menu.main'|trans }}</div>
+                <div class="menu-el menu-prog">{{ 'menu.program'|trans }}</div>
+                <div class="menu-el menu-contacts">{{ 'menu.contacts'|trans }}</div>
             </div>
-            <span class="lang">|</span>
-            <div class="lang">
-                <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ru'})) }}">
-                    RU
-                </a>
+            <div class="menu-registration">
+                <div class="lang">
+                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
+                        <img src="{{ asset('icons/uk.png') }}" alt="eng">
+                    </a>
+                </div>
+                <div class="lang">
+                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ru'})) }}">
+                        <img src="{{ asset('icons/russia.png') }}" alt="rus">
+                    </a>
+                </div>
+                <div class="menu-el menu-btn">
+                    <button type="button" class="reg-btn">{{ 'menu.register'|trans }}</button>
+                </div>
             </div>
         </div>
     </div>
-
 
     <div class="bars" onclick="showmenu()"><img src="{{ asset('icons/bars.svg') }}" alt="bars"></div>
     <div class="xmark" onclick="hidemenu()"><img src="{{ asset('icons/xmark.svg') }}" alt="xmark"></div>
@@ -29,18 +37,21 @@
                 <div class="menu-el menu-prog">{{ 'menu.program'|trans }}</div>
                 <div class="menu-el menu-contacts">{{ 'menu.contacts'|trans }}</div>
             </div>
-
-            <div class="mobile-lang-wrapper">
-                <div class="lang">
-                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
-                        EN
-                    </a>
+            <div class="mobile-menu-registration">
+                <div class="mobile-lang-wrapper">
+                    <div class="lang">
+                        <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
+                            <img src="{{ asset('icons/uk.png') }}" alt="eng">
+                        </a>
+                    </div>
+                    <div class="lang">
+                        <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ru'})) }}">
+                            <img src="{{ asset('icons/russia.png') }}" alt="rus">
+                        </a>
+                    </div>
                 </div>
-                <span class="lang">|</span>
-                <div class="lang">
-                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ru'})) }}">
-                        RU
-                    </a>
+                <div class="menu-el menu-btn">
+                    <button type="button" class="reg-btn">{{ 'menu.register'|trans }}</button>
                 </div>
             </div>
         </div>
@@ -53,12 +64,12 @@
                 function handleNavigation() {
                     let screenWidth = $(window).width();
                     if(screenWidth > 700){
-                        $('.lang-wrapper').show();
+                        $('.header-desktop').show();
                         $('.mobile').hide();
                         $('.bars').hide();
                         $('.xmark').hide();
                     } else {
-                        $('.lang-wrapper').hide();
+                        $('.header-desktop').hide();
                         if($('.mobile').is(':visible')){
                             $('.bars').hide();
                             $('.xmark').show();

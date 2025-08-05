@@ -1,0 +1,25 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'title.main'|trans }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/style_main.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="btn-wrapper">
+        <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+            <button class="btn" type="button">{{ 'page.about'|trans }}</button>
+        </a>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    </script>
+{% endblock %}
