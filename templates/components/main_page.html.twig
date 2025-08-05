@@ -73,6 +73,21 @@
 {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        const images = [
+            '/images/port.JPG',
+            '/images/sunflower.JPG',
+            '/images/wheat.JPG'
+        ];
 
+        let current = 0;
+
+        function changeBackground() {
+            current = (current + 1) % images.length;
+            document.querySelector('.slider').style.backgroundImage = `url('${images[current]}')`;
+        }
+
+        document.querySelector('.slider').style.backgroundImage = `url('${images[0]}')`;
+
+        setInterval(changeBackground, 5000);
     </script>
 {% endblock %}

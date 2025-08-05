@@ -6,8 +6,9 @@ body, html {
     font-family: "Montserrat", serif;
     width: 100vw;
     height: 100vh;
-    background: #93c5fd;
-    background: url("../images/port.JPG") no-repeat center;
+    background: white;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .logo-top{
@@ -19,7 +20,8 @@ body, html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .logo-wrapper{
@@ -115,12 +117,17 @@ body, html {
 }
 
 .slider{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50%;
+    position: absolute;
+    top: 200px;
+    bottom: 110px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url('../images/port.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
 }
 
 .int-conf{
@@ -141,5 +148,5 @@ body, html {
     height: 260px;
     background: url("../icons/bottom.png") no-repeat top center;
     background-size: 100% auto;
-    z-index: 1;
+    z-index: 2;
 }
