@@ -1,0 +1,86 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'button.contacts'|trans }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/style_contacts.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="contacts-top">
+        <div class="line-menu">
+            <div class="btn-wrapper">
+                <a href="{{ path('main_page', {'_locale': app.request.locale}) }}" class="btn">
+                    {{ 'button.main_page'|trans }}
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    {{ 'button.about'|trans }}
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    {{ 'button.program'|trans }}
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn">
+                    {{ 'button.speaker'|trans }}
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn">
+                    {{ 'button.partner'|trans }}
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn">
+                    {{ 'button.sponsor_options'|trans }}
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn">
+                    {{ 'button.participation'|trans }}
+                </a>
+            </div>
+        </div>
+
+        <div class="logo-contacts-reg-wrapper">
+            <div class="conf-logo">dd</div>
+            <div class="contacts-block-wrapper">
+                <div class="conf-logo"></div>
+                <div class="contacts-block"></div>
+                <div class="registration"></div>
+            </div>
+            <div class="registration-wrapper">ff</div>
+        </div>
+    </div>
+
+    <div class="contacts-bottom"></div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        const images = [
+            '/mersin_images/mersin1.jpg',
+            '/mersin_images/mersin2.jpg',
+            '/mersin_images/mersin3.jpg',
+        ];
+
+        let current = 0;
+
+        function changeBackground() {
+            current = (current + 1) % images.length;
+            document.querySelector('.contacts-bottom').style.backgroundImage = `url('${images[current]}')`;
+        }
+
+        document.querySelector('.contacts-bottom').style.backgroundImage = `url('${images[0]}')`;
+
+        setInterval(changeBackground, 4000);
+    </script>
+{% endblock %}

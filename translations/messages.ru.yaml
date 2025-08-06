@@ -14,6 +14,7 @@ event:
   registration: "РЕГИСТРАЦИЯ "
 
 button:
+  main_page: "ГЛАВНАЯ СТРАНИЦА"
   about: "О КОНФЕРЕНЦИИ"
   program: "ПРОГРАММА"
   speaker: "СПИКЕРЫ"

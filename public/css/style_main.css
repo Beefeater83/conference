@@ -140,7 +140,7 @@ body, html {
 .slider{
     position: absolute;
     top: 200px;
-    bottom: 110px;
+    bottom: 85px;
     left: 0;
     right: 0;
     z-index: 1;
@@ -183,17 +183,21 @@ body, html {
     margin-bottom: 30px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
+    margin-right: 25px;
     margin-left: 20px;
 }
 
-.bottom-menu-up .btn-wrapper{
-    margin-right: 40px;
+.bottom-menu-up > .btn-wrapper{
+    margin-right: 45px;
 }
 
 .bottom-menu-down{
     margin-bottom: 50px;
     display: flex;
-    justify-content: space-around;
-    margin-left: 40px;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.bottom-menu-down .btn-wrapper{
+    margin-right: 20px;
 }

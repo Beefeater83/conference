@@ -33,4 +33,11 @@ class MainController extends AbstractController
 
         return $this->render('components/about.html.twig', []);
     }
+
+    #[Route('/{_locale}/contacts', name: 'contacts', requirements: ['_locale' => 'en|ru'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    public function contacts(Request $request): Response
+    {
+
+        return $this->render('components/contacts.html.twig', []);
+    }
 }
