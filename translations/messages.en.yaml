@@ -4,13 +4,26 @@ menu:
   contacts: "Contacts"
   register: "Register"
 
-title:
-  main: "Grain conference 2025"
-  about: "ABOUT CONFERENCE"
+event:
+  november: "NOVEMBER "
+  mersin: "MERSIN"
+  turkey: "TURKEY"
+  before_start: "STARTS IN"
+  months: "MONTHS"
+  days: "DAYS"
+  registration: "REGISTRATION "
 
-page:
-  conf: "Conference: "
+button:
   about: "ABOUT CONFERENCE"
+  program: "PROGRAM"
+  speaker: "SPEAKERS"
+  partner: "PARTNERS"
+  sponsor_options: "SPONSORSHIP OPTIONS"
+  participation: "PARTICIPATION TERMS"
+  hotel: "HOTEL"
+  contacts: "CONTACTS"
+
+
 
 about_content:
   paragraph_one: "APK-Inform Agency together with the Ukrainian Pulses and Soybean Association announces a landmark event for the Ukrainian soybean market – the 'Soybean and Meal Market' conference."

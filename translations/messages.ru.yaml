@@ -4,13 +4,24 @@ menu:
   contacts: "Контакты"
   register: "Регистрация"
 
-title:
-  main: "Зерновая конференция 2025"
-  about: "О КОНФЕРЕНЦИИ"
+event:
+  november: "НОЯБРЬ "
+  mersin: "МЕРСИН"
+  turkey: "ТУРЦИЯ"
+  before_start: "ДО НАЧАЛА"
+  months: "МЕСЯЦЕВ"
+  days: "ДНЕЙ"
+  registration: "РЕГИСТРАЦИЯ "
 
-page:
-  conf: "Конференция: "
+button:
   about: "О КОНФЕРЕНЦИИ"
+  program: "ПРОГРАММА"
+  speaker: "СПИКЕРЫ"
+  partner: "ПАРТНЕРЫ"
+  sponsor_options: "СПОНСОРСКИЕ ВОЗМОЖНОСТИ"
+  participation: "УСЛОВИЯ УЧАСТИЯ"
+  hotel: "ОТЕЛЬ"
+  contacts: "КОНТАКТЫ"
 
 about_content:
   paragraph_one: "ИА «АПК-Информ» совместно с ОC «Украинская бобово-соевая ассоциация» объявляют о проведении знакового события для украинского соевого рынка – конференции «Soybean and Meal market»."

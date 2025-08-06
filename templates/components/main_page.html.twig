@@ -1,7 +1,7 @@
 
 {% extends 'layout.html.twig' %}
 
-{% block title %}{{ 'title.main'|trans }}{% endblock %}
+{% block title %}AgroFood Summit{% endblock %}
 
 {% block styles %}
     <link rel="stylesheet" href="{{ asset('css/style_main.css') }}">
@@ -23,30 +23,30 @@
 
         <div class="event-info-wrapper">
             <div class="event-place">
-                <div class="date">NOVEMBER 5-6-7, 2025</div>
-                <div class="turkey">MERSIN, TURKEY</div>
+                <div class="date">{{ 'event.november'|trans }} 5-6-7, 2025</div>
+                <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
             </div>
             <div class="event-logo">
                 <img src="/logo/agrofood.svg" alt="agrofood">
             </div>
             <div class="event-date-registration">
                 <div class="table">
-                    <div class="before-start">ДО НАЧАЛА</div>
+                    <div class="before-start">{{ 'event.before_start'|trans }}</div>
                     <div class="day-month-wrapper">
                         <div class="month-wrapper">
-                            <div class="month-figure">07</div>
-                            <div class="month">МЕСЯЦЕВ</div>
+                            <div class="month-figure">{{ data.months }}</div>
+                            <div class="month">{{ 'event.months'|trans }}</div>
                         </div>
                         <div class="days-wrapper">
-                            <div class="days-figure">13</div>
-                            <div class="days">ДНЕЙ</div>
+                            <div class="days-figure">{{ data.days }}</div>
+                            <div class="days">{{ 'event.days'|trans }}</div>
                         </div>
                     </div>
                 </div>
                 <div class="registration">
                     <div class="btn-wrapper">
                         <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
-                            <button class="btn" type="button">РЕГИСТРАЦИЯ >></button>
+                            <button class="btn" type="button">{{ 'event.registration'|trans }} >></button>
                         </a>
                     </div>
                 </div>
@@ -60,10 +60,49 @@
     </div>
 
     <div class="bottom-wave">
-        <div class="btn-wrapper">
-            <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
-                <button class="btn" type="button">{{ 'page.about'|trans }}</button>
-            </a>
+        <div class="bottom-menu-up">
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.about'|trans }}</button>
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.program'|trans }}</button>
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.speaker'|trans }}</button>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-menu-down">
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.partner'|trans }}</button>
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.sponsor_options'|trans }}</button>
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.participation'|trans }}</button>
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.hotel'|trans }}</button>
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                    <button class="btn" type="button">{{ 'button.contacts'|trans }}</button>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -74,9 +113,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         const images = [
-            '/images/port.JPG',
+            '/images/wheat.JPG',
             '/images/sunflower.JPG',
-            '/images/wheat.JPG'
+            '/images/port.JPG'
         ];
 
         let current = 0;
@@ -88,6 +127,6 @@
 
         document.querySelector('.slider').style.backgroundImage = `url('${images[0]}')`;
 
-        setInterval(changeBackground, 5000);
+        setInterval(changeBackground, 4000);
     </script>
 {% endblock %}
