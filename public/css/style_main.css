@@ -26,6 +26,7 @@ body, html {
 
 .logo-wrapper{
     display: flex;
+    margin-top: 5px;
     width: 50%;
     height: 20%;
     justify-content: space-around;
@@ -127,6 +128,15 @@ body, html {
     transition: all ease-in-out 500ms;
 }
 
+.btn:hover, .btn:active, .reg-btn {
+    color: white;
+    background: linear-gradient(to bottom, rgba(173,21,1,1) 0%,rgba(242,102,2,1) 19%,rgba(251,149,94,1) 100%);
+}
+
+.reg-btn:hover, .reg-btn:active{
+    letter-spacing: 1.2px;
+}
+
 .slider{
     position: absolute;
     top: 200px;
@@ -153,11 +163,6 @@ body, html {
     text-align: center;
     letter-spacing: 6px;
     font-weight: 700;
-}
-
-.btn:hover, .btn:active {
-    color: white;
-    background: linear-gradient(to bottom, rgba(173,21,1,1) 0%,rgba(242,102,2,1) 19%,rgba(251,149,94,1) 100%);
 }
 
 .bottom-wave{

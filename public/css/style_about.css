@@ -1,25 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    position: relative;
+    overflow-x: hidden;
+}
 
 .about-wrapper{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
 }
 
 .about-side{
-    width: 20%;
-    background: #fff;
-    padding: 20px;
+    width: 25%;
+    background: linear-gradient(to bottom, #0f0f0f 0%, #272727 40%, #3a3a3a 100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    color: white;
+    align-items: center;
+}
+
+.side-el{
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.conf{
+    font-weight: 700;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.month, .turkey{
+    font-size: 1.1em;
+}
+
+.organizer{
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.logo-wrapper{
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+}
+
+.logo{
+    margin-bottom: 30px;
+}
+
+
+.devider{
+    width: 0.2%;
+    background: rgba(242,102,2,1);
 }
 
 .about-main {
-    width: 80%;
+    width: 74.8%;
     padding: 20px;
-    background: #63c163;
-    color: #fff;
+    background: white;
+    color: black;
     font-size: 1.1em;
 }
 .about-paragraph, .about-heading {
@@ -30,6 +81,14 @@
     margin-top: 40px;
     font-weight: 600;
 }
+.cube{
+    display: inline-block;
+    background: rgba(242,102,2,1);
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
 .about-topic-item{
     margin-bottom: 10px;
 }
@@ -37,4 +96,28 @@
 .about-main-bottom{
     display: flex;
     justify-content: flex-end;
+}
+
+.line-menu{
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.6em;
+    margin: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    color: black;
+    text-decoration-color: rgba(242,102,2,1);
+    text-underline-offset: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.btn:hover{
+    font-weight: 600;
+}
+
+.current-btn{
+    font-weight: 600;
 }

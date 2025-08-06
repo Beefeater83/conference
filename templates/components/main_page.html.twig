@@ -11,13 +11,13 @@
     <div class="logo-top">
         <div class="logo-wrapper">
             <div class="logo">
-                <img src="/logo/apk.svg" alt="apk">
+                <img src="{{ asset('logo/apk.svg') }}" alt="apk">
             </div>
             <div class="logo">
-                <img src="/logo/soybean.svg" alt="soybean">
+                <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
             </div>
             <div class="logo">
-                <img src="/logo/asia.svg" alt="asia">
+                <img src="{{ asset('logo/asia.svg') }}" alt="asia">
             </div>
         </div>
 
@@ -27,7 +27,7 @@
                 <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
             </div>
             <div class="event-logo">
-                <img src="/logo/agrofood.svg" alt="agrofood">
+                <img src="{{ asset('logo/agrofood.svg') }}" alt="agrofood">
             </div>
             <div class="event-date-registration">
                 <div class="table">
@@ -46,7 +46,7 @@
                 <div class="registration">
                     <div class="btn-wrapper">
                         <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
-                            <button class="btn" type="button">{{ 'event.registration'|trans }} >></button>
+                            <button class="btn reg-btn" type="button">{{ 'event.registration'|trans }} >></button>
                         </a>
                     </div>
                 </div>

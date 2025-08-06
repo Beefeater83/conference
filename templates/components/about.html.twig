@@ -1,7 +1,7 @@
 
 {% extends 'layout.html.twig' %}
 
-{% block title %}{{ 'title.about'|trans }}{% endblock %}
+{% block title %}{{ 'button.about'|trans }}{% endblock %}
 
 {% block styles %}
     <link rel="stylesheet" href="{{ asset('css/style_about.css') }}">
@@ -10,12 +10,69 @@
 {% block content %}
 
     <div class="about-wrapper">
-        <div class="about-side">ddddd</div>
+        <div class="about-side">
+            <div class="side-el conf">{{ 'button.about'|trans }}</div>
+            <div class="side-el month">{{ 'event.november'|trans }} 5-6-7, 2025</div>
+            <div class="side-el turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
+            <div class="side-el organizer">{{ 'about_content.organizers'|trans }}</div>
+
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                </div>
+                <div class="logo">
+                    <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+                </div>
+                <div class="logo">
+                    <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                </div>
+            </div>
+        </div>
+
+        <div class="devider"></div>
+
         <div class="about-main">
+            <div class="line-menu">
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn current-btn">
+                        {{ 'button.about'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.program'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.speaker'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.partner'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.sponsor_options'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.participation'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.contacts'|trans }}
+                    </a>
+                </div>
+            </div>
             <div class="about-paragraph">{{ 'about_content.paragraph_one'|trans }}</div>
             <div class="about-paragraph">{{ 'about_content.paragraph_two'|trans }}</div>
 
-            <div class="about-heading">{{ 'about_content.paragraph_three'|trans }}</div>
+            <div class="about-heading"><span class="cube"></span>{{ 'about_content.paragraph_three'|trans }}</div>
 
             <div class="about-topics">
                 {% for i in 1..9 %}
@@ -23,13 +80,6 @@
                         {{ ('about_content.topic_' ~ i)|trans }}
                     </div>
                 {% endfor %}
-            </div>
-            <div class="about-main-bottom">
-                <div class="btn-wrapper">
-                    <a href="#" class="btn">
-                        <button class="btn" type="button">{{ 'about_content.button'|trans }}  >></button>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
