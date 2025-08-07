@@ -24,12 +24,6 @@
 
     <div class="mobile">
         <div class="mobile-menu-wrapper">
-            <div class="mobile-menu">
-                <div class="menu-el menu-main">{{ 'menu.main'|trans }}</div>
-                <div class="menu-el menu-prog">{{ 'menu.program'|trans }}</div>
-                <div class="menu-el menu-contacts">{{ 'menu.contacts'|trans }}</div>
-            </div>
-
             <div class="mobile-lang-wrapper">
                 <div class="lang">
                     <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
@@ -43,6 +37,55 @@
                     </a>
                 </div>
             </div>
+
+            <div class="mobile-menu">
+                <div class="menu-el">
+                    <a href="{{ path('main_page', {'_locale': app.request.locale}) }}">
+                        {{ 'button.main_page'|trans }}
+                    </a>
+                </div>
+                <div class="menu-el">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}">
+                        {{ 'button.about'|trans }}
+                    </a>
+                </div>
+                <div class="menu-el">
+                    <a href="#">
+                        {{ 'button.speaker'|trans }}
+                    </a>
+                </div>
+                <div class="menu-el">
+                    <a href="#">
+                        {{ 'button.partner'|trans }}
+                    </a>
+                </div>
+                <div class="menu-el">
+                    <a href="#">
+                        {{ 'button.sponsor_options'|trans }}
+                    </a>
+                </div>
+                <div class="menu-el">
+                    <a href="#">
+                        {{ 'button.participation'|trans }}
+                    </a>
+                </div>
+                <div class="menu-el">
+                    <a href="{{ path('contacts', {'_locale': app.request.locale}) }}">
+                        {{ 'button.contacts'|trans }}
+                    </a>
+                </div>
+            </div>
+            <div class="mob-logo-wrapper">
+                <div class="mob-logo">
+                    <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                </div>
+                <div class="mob-logo">
+                    <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+                </div>
+                <div class="mob-logo">
+                    <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -52,7 +95,7 @@
             $(document).ready(function() {
                 function handleNavigation() {
                     let screenWidth = $(window).width();
-                    if(screenWidth > 700){
+                    if(screenWidth > 800){
                         $('.lang-wrapper').show();
                         $('.mobile').hide();
                         $('.bars').hide();

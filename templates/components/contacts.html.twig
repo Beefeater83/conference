@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div class="btn-wrapper">
-                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                <a href="#" class="btn">
                     {{ 'button.program'|trans }}
                 </a>
             </div>
@@ -49,13 +49,46 @@
         </div>
 
         <div class="logo-contacts-reg-wrapper">
-            <div class="conf-logo">dd</div>
-            <div class="contacts-block-wrapper">
-                <div class="conf-logo"></div>
-                <div class="contacts-block"></div>
-                <div class="registration"></div>
+            <div class="conf-logo">
+                <img src="{{ asset('logo/agrofood.svg') }}" alt="agrofood">
             </div>
-            <div class="registration-wrapper">ff</div>
+            <div class="contacts-block-wrapper">
+                <div class="logo-block">
+                    <div class="logo">
+                        <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                    </div>
+                    <div class="logo">
+                        <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                    </div>
+                </div>
+                <div class="contacts-company">ИА АПК-ИНФОРМ</div>
+                <div class="devider"></div>
+                <div class="contacts">+380 562 320795, +380 562 320795 (доб.111)</div>
+                <div class="contacts">+380 67 6342630</div>
+                <div class="contacts">market@apk-inform.com</div>
+
+                <div class="logo-block">
+                    <div class="logo">
+                        <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+                    </div>
+                </div>
+                <div class="contacts-company">ОА УКРАИНСКАЯ БОБОВО-СОЕВАЯ АССОЦИЯЦИЯ</div>
+                <div class="devider"></div>
+                <div class="contacts">Дмитрий Орел</div>
+                <div class="contacts">+380 63 1502011</div>
+                <div class="contacts">df.bobovi@gmail.com</div>
+            </div>
+            <div class="registration-wrapper">
+                <div class="month">{{ 'event.november'|trans }} 5-6-7, 2025</div>
+                <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
+                <div class="registration">
+                    <div class="reg-btn-wrapper">
+                        <a href="#">
+                            <button class="btn-a reg-btn" type="button">{{ 'event.registration'|trans }} >></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

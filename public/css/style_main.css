@@ -139,8 +139,8 @@ body, html {
 
 .slider{
     position: absolute;
-    top: 200px;
-    bottom: 85px;
+    top: 220px;
+    bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
@@ -170,7 +170,7 @@ body, html {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 260px;
+    height: 230px;
     background: url("../icons/bottom.png") no-repeat top center;
     background-size: 100% auto;
     z-index: 2;
@@ -201,3 +201,62 @@ body, html {
 .bottom-menu-down .btn-wrapper{
     margin-right: 20px;
 }
+
+@media (max-width: 1350px){
+    .bottom-wave{
+        height: 200px;
+    }
+    .bottom-menu-up{
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+    .bottom-menu-down{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px){
+
+    .btn {
+        width: 140px;
+        height: 30px;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+    .bottom-wave{
+        height: 180px;
+    }
+}
+@media (max-width: 950px) and (min-width: 801px){
+    .btn {
+        width: 115px;
+        height: 22px;
+        font-size: 0.7em;
+        letter-spacing: 1px;
+    }
+    .bottom-menu-up{
+        margin-right: 1px;
+    }
+    .bottom-menu-down{
+        margin-bottom: 10px;
+    }
+    .bottom-wave{
+        height: 150px;
+    }
+}
+
+@media (max-width: 800px){
+    .bottom-menu-up{
+        display: none;
+    }
+    .bottom-menu-down{
+        display: none;
+    }
+    .bottom-wave{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+}
+
