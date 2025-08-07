@@ -15,6 +15,12 @@
                     RU
                 </a>
             </div>
+            <span class="lang">|</span>
+            <div class="lang">
+                <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ua'})) }}">
+                    UA
+                </a>
+            </div>
         </div>
     </div>
 
@@ -34,6 +40,12 @@
                 <div class="lang">
                     <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ru'})) }}">
                         RU
+                    </a>
+                </div>
+                <span class="lang">|</span>
+                <div class="lang">
+                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ua'})) }}">
+                        UA
                     </a>
                 </div>
             </div>

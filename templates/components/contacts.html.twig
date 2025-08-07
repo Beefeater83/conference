@@ -48,37 +48,52 @@
             </div>
         </div>
 
-        <div class="logo-contacts-reg-wrapper">
-            <div class="conf-logo">
-                <img src="{{ asset('logo/agrofood.svg') }}" alt="agrofood">
+        <div class="main-wrapper">
+
+            <div class="contacts-block-wrapper">
+                <div class="logo">
+                    <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                </div>
+                <div class="devider"></div>
+                <div class="contacts-name">Polina Kalaida</div>
+                <div class="contacts">+7 747 110 57 27 (Kazakhstan)</div>
+                <div class="contacts">+38 097 333 97 29 (Ukraine)</div>
+                <div class="contacts">global@apk-inform.com</div>
+
+                <div class="contacts-name">Elena Cherednichenko</div>
+                <div class="contacts">+7 705 268 75 10 (Kazakhstan)</div>
+                <div class="contacts">+38 067 634 26 20 (Ukraine)</div>
+                <div class="contacts">chief_editor@apk-inform.com</div>
             </div>
             <div class="contacts-block-wrapper">
-                <div class="logo-block">
-                    <div class="logo">
-                        <img src="{{ asset('logo/apk.svg') }}" alt="apk">
-                    </div>
-                    <div class="logo">
-                        <img src="{{ asset('logo/asia.svg') }}" alt="asia">
-                    </div>
+                <div class="logo">
+                    <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
                 </div>
-                <div class="contacts-company">ИА АПК-ИНФОРМ</div>
                 <div class="devider"></div>
-                <div class="contacts">+380 562 320795, +380 562 320795 (доб.111)</div>
-                <div class="contacts">+380 67 6342630</div>
-                <div class="contacts">market@apk-inform.com</div>
+                <div class="contacts-descr">For English speaking participants:</div>
+                <div class="contacts-name">Alina Zrazhevska</div>
+                <div class="contacts">+38 095 301 83 61 (available via Viber, WhatsApp, Telegram)</div>
+                <div class="contacts">conference.pulses@gmail.com</div>
 
-                <div class="logo-block">
-                    <div class="logo">
-                        <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
-                    </div>
-                </div>
-                <div class="contacts-company">ОА УКРАИНСКАЯ БОБОВО-СОЕВАЯ АССОЦИЯЦИЯ</div>
-                <div class="devider"></div>
-                <div class="contacts">Дмитрий Орел</div>
-                <div class="contacts">+380 63 1502011</div>
+                <div class="contacts-descr contacts-descr-second">For Ukrainian speaking participants:</div>
+                <div class="contacts-name">Dmytro Orel</div>
+                <div class="contacts">+38 063 150 20 11</div>
                 <div class="contacts">df.bobovi@gmail.com</div>
             </div>
+            <div class="contacts-block-wrapper">
+                <div class="logo apk-logo">
+                    <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                </div>
+                <div class="devider"></div>
+                <div class="contacts">+380 562 320795</div>
+                <div class="contacts">+380 562 320795 (доб.111)</div>
+                <div class="contacts">+38 067 634 26 30</div>
+                <div class="contacts">market@apk-inform.com</div>
+            </div>
             <div class="registration-wrapper">
+                <div class="conf-logo">
+                    <img src="{{ asset('logo/agrofoodnocircle.svg') }}" alt="agrofood">
+                </div>
                 <div class="month">{{ 'event.november'|trans }} 5-6-7, 2025</div>
                 <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
                 <div class="registration">
@@ -107,12 +122,30 @@
 
         let current = 0;
 
-        function changeBackground() {
-            current = (current + 1) % images.length;
-            document.querySelector('.contacts-bottom').style.backgroundImage = `url('${images[current]}')`;
+        function getTargetElement() {
+            return window.innerWidth <= 800
+                ? document.querySelector('.contacts-top')
+                : document.querySelector('.contacts-bottom');
         }
 
-        document.querySelector('.contacts-bottom').style.backgroundImage = `url('${images[0]}')`;
+        function changeBackground() {
+            current = (current + 1) % images.length;
+            const target = getTargetElement();
+            if (target) {
+                target.style.backgroundImage = `url('${images[current]}')`;
+                target.style.backgroundSize = 'cover';
+                target.style.backgroundPosition = 'center top';
+                target.style.backgroundRepeat = 'no-repeat';
+            }
+        }
+
+        const initialTarget = getTargetElement();
+        if (initialTarget) {
+            initialTarget.style.backgroundImage = `url('${images[0]}')`;
+            initialTarget.style.backgroundSize = 'cover';
+            initialTarget.style.backgroundPosition = 'center top';
+            initialTarget.style.backgroundRepeat = 'no-repeat';
+        }
 
         setInterval(changeBackground, 4000);
     </script>

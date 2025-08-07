@@ -17,7 +17,7 @@ class MainController extends AbstractController
         $this->calculationService = $calculationService;
     }
 
-    #[Route('/{_locale}', name: 'main_page', requirements: ['_locale' => 'en|ru'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    #[Route('/{_locale}', name: 'main_page', requirements: ['_locale' => 'en|ru|ua'], defaults: ['_locale' => 'en'], methods: ['GET'])]
     public function mainPage(Request $request): Response
     {
         $timeUntilConference = $this->calculationService->getTimeUntilConference();
@@ -27,14 +27,14 @@ class MainController extends AbstractController
         ]);
     }
 
-    #[Route('/{_locale}/about', name: 'about_conference', requirements: ['_locale' => 'en|ru'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    #[Route('/{_locale}/about', name: 'about_conference', requirements: ['_locale' => 'en|ru|ua'], defaults: ['_locale' => 'en'], methods: ['GET'])]
     public function aboutConference(Request $request): Response
     {
 
         return $this->render('components/about.html.twig', []);
     }
 
-    #[Route('/{_locale}/contacts', name: 'contacts', requirements: ['_locale' => 'en|ru'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    #[Route('/{_locale}/contacts', name: 'contacts', requirements: ['_locale' => 'en|ru|ua'], defaults: ['_locale' => 'en'], methods: ['GET'])]
     public function contacts(Request $request): Response
     {
 
