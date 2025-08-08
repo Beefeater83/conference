@@ -107,7 +107,10 @@
         </div>
     </div>
 
-    <div class="contacts-bottom"></div>
+    <div class="contacts-bottom">
+        <div class="bg-layer" id="cLayer1"></div>
+        <div class="bg-layer hidden" id="cLayer2"></div>
+    </div>
 
 {% endblock %}
 
@@ -117,36 +120,72 @@
         const images = [
             '/mersin_images/mersin1.jpg',
             '/mersin_images/mersin2.jpg',
-            '/mersin_images/mersin3.jpg',
+            '/mersin_images/mersin3.jpg'
         ];
 
         let current = 0;
+        let visibleLayer = 1;
 
-        function getTargetElement() {
-            return window.innerWidth <= 800
-                ? document.querySelector('.contacts-top')
-                : document.querySelector('.contacts-bottom');
-        }
+        function ensureLayers(container, idPrefix) {
+            if (!container.querySelector(`#${idPrefix}1`)) {
+                const layer1 = document.createElement('div');
+                layer1.className = 'bg-layer';
+                layer1.id = `${idPrefix}1`;
 
-        function changeBackground() {
-            current = (current + 1) % images.length;
-            const target = getTargetElement();
-            if (target) {
-                target.style.backgroundImage = `url('${images[current]}')`;
-                target.style.backgroundSize = 'cover';
-                target.style.backgroundPosition = 'center top';
-                target.style.backgroundRepeat = 'no-repeat';
+                const layer2 = document.createElement('div');
+                layer2.className = 'bg-layer hidden';
+                layer2.id = `${idPrefix}2`;
+
+                container.prepend(layer2);
+                container.prepend(layer1);
             }
         }
 
-        const initialTarget = getTargetElement();
-        if (initialTarget) {
-            initialTarget.style.backgroundImage = `url('${images[0]}')`;
-            initialTarget.style.backgroundSize = 'cover';
-            initialTarget.style.backgroundPosition = 'center top';
-            initialTarget.style.backgroundRepeat = 'no-repeat';
+        function getTargetLayers() {
+            if (window.innerWidth <= 800) {
+                const top = document.querySelector('.contacts-top');
+                ensureLayers(top, 'topLayer');
+                return [
+                    document.getElementById('topLayer1'),
+                    document.getElementById('topLayer2')
+                ];
+            } else {
+                const bottom = document.querySelector('.contacts-bottom');
+                ensureLayers(bottom, 'bottomLayer');
+                return [
+                    document.getElementById('bottomLayer1'),
+                    document.getElementById('bottomLayer2')
+                ];
+            }
         }
 
+        function initBackground() {
+            const [layer1, layer2] = getTargetLayers();
+            if (!layer1 || !layer2) return;
+
+            layer1.style.backgroundImage = `url('${images[0]}')`;
+            current = 0;
+            visibleLayer = 1;
+        }
+
+        function changeBackground() {
+            const [layer1, layer2] = getTargetLayers();
+            if (!layer1 || !layer2) return;
+
+            const next = (current + 1) % images.length;
+            const showLayer = visibleLayer === 1 ? layer2 : layer1;
+            const hideLayer = visibleLayer === 1 ? layer1 : layer2;
+
+            showLayer.style.backgroundImage = `url('${images[next]}')`;
+            hideLayer.classList.add('hidden');
+            showLayer.classList.remove('hidden');
+
+            visibleLayer = visibleLayer === 1 ? 2 : 1;
+            current = next;
+        }
+
+        initBackground();
         setInterval(changeBackground, 4000);
+        window.addEventListener('resize', initBackground);
     </script>
 {% endblock %}

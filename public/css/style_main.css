@@ -128,14 +128,21 @@ body, html {
     transition: all ease-in-out 500ms;
 }
 
-.btn:hover, .btn:active, .reg-btn {
+.reg-btn {
     color: white;
     background: linear-gradient(to bottom, rgba(173,21,1,1) 0%,rgba(242,102,2,1) 19%,rgba(251,149,94,1) 100%);
 }
 
-.reg-btn:hover, .reg-btn:active{
-    letter-spacing: 1.2px;
+@media (min-width: 801px){
+    .btn:hover {
+        color: white;
+        background: linear-gradient(to bottom, rgba(173,21,1,1) 0%,rgba(242,102,2,1) 19%,rgba(251,149,94,1) 100%);
+    }
+    .reg-btn:hover{
+        letter-spacing: 1.2px;
+    }
 }
+
 
 .slider{
     position: absolute;
@@ -144,15 +151,26 @@ body, html {
     left: 0;
     right: 0;
     z-index: 1;
-    background-image: url('../images/wheat.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.slider-layer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.slider-layer.hidden {
+    opacity: 0;
 }
 
 .int-conf{

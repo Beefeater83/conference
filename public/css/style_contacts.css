@@ -115,14 +115,15 @@ body, html {
 }
 
 .month{
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 1.2em;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .turkey{
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 1.2em;
     letter-spacing: 1px;
 }
@@ -133,9 +134,24 @@ body, html {
     bottom: 0;
     height: 80vh;
     width: 100%;
-    background: url("../mersin_images/mersin1.jpg") no-repeat center top;
-    background-size: cover;
     z-index: 1;
+    overflow: hidden;
+}
+
+.bg-layer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.bg-layer.hidden {
+    opacity: 0;
 }
 
 .reg-btn-wrapper {
@@ -172,7 +188,7 @@ body, html {
     background: linear-gradient(to bottom, rgba(173,21,1,1) 0%,rgba(242,102,2,1) 19%,rgba(251,149,94,1) 100%);
 }
 
-.reg-btn:hover, .reg-btn:active{
+.reg-btn:hover{
     letter-spacing: 1.2px;
 }
 
@@ -226,10 +242,10 @@ body, html {
     .contacts-top{
         height: auto;
         min-height: 100vh;
-        background-color: rgba(0, 0, 0, 0.6);
-        background-blend-mode: darken;
-      /*  background-color: rgba(255, 255, 255, 0.7);
-        background-blend-mode: lighten; */
+        /*   background-color: rgba(0, 0, 0, 0.6);
+           background-blend-mode: darken;
+           background-color: rgba(255, 255, 255, 0.7);
+           background-blend-mode: lighten; */
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
@@ -245,5 +261,9 @@ body, html {
     }
     .registration{
         margin-bottom: 10px;
+    }
+    .bg-layer {
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: darken;
     }
 }

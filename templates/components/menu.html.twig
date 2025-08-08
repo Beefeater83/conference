@@ -2,8 +2,35 @@
     <link rel="stylesheet" href="{{ asset('css/style_menu.css') }}">
 {% endblock %}
 
-    <div class="lang-wrapper">
-        <div class="inner-lang-wrapper">
+<div class="lang-wrapper">
+    <div class="inner-lang-wrapper">
+        <div class="lang">
+            <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
+                EN
+            </a>
+        </div>
+        <span class="lang">|</span>
+        <div class="lang">
+            <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ru'})) }}">
+                RU
+            </a>
+        </div>
+        <span class="lang">|</span>
+        <div class="lang">
+            <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ua'})) }}">
+                UA
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="bars" onclick="showmenu()"><img src="{{ asset('icons/bars.svg') }}" alt="bars"></div>
+<div class="xmark" onclick="hidemenu()"><img src="{{ asset('icons/xmark.svg') }}" alt="xmark"></div>
+
+<div class="mobile">
+    <div class="mobile-menu-wrapper">
+        <div class="mobile-lang-wrapper">
             <div class="lang">
                 <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
                     EN
@@ -22,125 +49,98 @@
                 </a>
             </div>
         </div>
-    </div>
 
-
-    <div class="bars" onclick="showmenu()"><img src="{{ asset('icons/bars.svg') }}" alt="bars"></div>
-    <div class="xmark" onclick="hidemenu()"><img src="{{ asset('icons/xmark.svg') }}" alt="xmark"></div>
-
-    <div class="mobile">
-        <div class="mobile-menu-wrapper">
-            <div class="mobile-lang-wrapper">
-                <div class="lang">
-                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'en'})) }}">
-                        EN
-                    </a>
-                </div>
-                <span class="lang">|</span>
-                <div class="lang">
-                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ru'})) }}">
-                        RU
-                    </a>
-                </div>
-                <span class="lang">|</span>
-                <div class="lang">
-                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes|merge({'_locale': 'ua'})) }}">
-                        UA
-                    </a>
-                </div>
+        <div class="mobile-menu">
+            <div class="menu-el">
+                <a href="{{ path('main_page', {'_locale': app.request.locale}) }}">
+                    {{ 'button.main_page'|trans }}
+                </a>
             </div>
-
-            <div class="mobile-menu">
-                <div class="menu-el">
-                    <a href="{{ path('main_page', {'_locale': app.request.locale}) }}">
-                        {{ 'button.main_page'|trans }}
-                    </a>
-                </div>
-                <div class="menu-el">
-                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}">
-                        {{ 'button.about'|trans }}
-                    </a>
-                </div>
-                <div class="menu-el">
-                    <a href="#">
-                        {{ 'button.speaker'|trans }}
-                    </a>
-                </div>
-                <div class="menu-el">
-                    <a href="#">
-                        {{ 'button.partner'|trans }}
-                    </a>
-                </div>
-                <div class="menu-el">
-                    <a href="#">
-                        {{ 'button.sponsor_options'|trans }}
-                    </a>
-                </div>
-                <div class="menu-el">
-                    <a href="#">
-                        {{ 'button.participation'|trans }}
-                    </a>
-                </div>
-                <div class="menu-el">
-                    <a href="{{ path('contacts', {'_locale': app.request.locale}) }}">
-                        {{ 'button.contacts'|trans }}
-                    </a>
-                </div>
+            <div class="menu-el">
+                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}">
+                    {{ 'button.about'|trans }}
+                </a>
             </div>
-            <div class="mob-logo-wrapper">
-                <div class="mob-logo">
-                    <img src="{{ asset('logo/apk.svg') }}" alt="apk">
-                </div>
-                <div class="mob-logo">
-                    <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
-                </div>
-                <div class="mob-logo">
-                    <img src="{{ asset('logo/asia.svg') }}" alt="asia">
-                </div>
+            <div class="menu-el">
+                <a href="#">
+                    {{ 'button.speaker'|trans }}
+                </a>
+            </div>
+            <div class="menu-el">
+                <a href="#">
+                    {{ 'button.partner'|trans }}
+                </a>
+            </div>
+            <div class="menu-el">
+                <a href="#">
+                    {{ 'button.sponsor_options'|trans }}
+                </a>
+            </div>
+            <div class="menu-el">
+                <a href="#">
+                    {{ 'button.participation'|trans }}
+                </a>
+            </div>
+            <div class="menu-el">
+                <a href="{{ path('contacts', {'_locale': app.request.locale}) }}">
+                    {{ 'button.contacts'|trans }}
+                </a>
+            </div>
+        </div>
+        <div class="mob-logo-wrapper">
+            <div class="mob-logo">
+                <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+            </div>
+            <div class="mob-logo">
+                <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+            </div>
+            <div class="mob-logo">
+                <img src="{{ asset('logo/asia.svg') }}" alt="asia">
             </div>
         </div>
     </div>
+</div>
 
 {% block scripts %}
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-            $(document).ready(function() {
-                function handleNavigation() {
-                    let screenWidth = $(window).width();
-                    if(screenWidth > 800){
-                        $('.lang-wrapper').show();
-                        $('.mobile').hide();
+        $(document).ready(function() {
+            function handleNavigation() {
+                let screenWidth = $(window).width();
+                if(screenWidth > 800){
+                    $('.lang-wrapper').show();
+                    $('.mobile').hide();
+                    $('.bars').hide();
+                    $('.xmark').hide();
+                } else {
+                    $('.lang-wrapper').hide();
+                    if($('.mobile').is(':visible')){
                         $('.bars').hide();
+                        $('.xmark').show();
+                    }else{
+                        $('.bars').show();
                         $('.xmark').hide();
-                    } else {
-                        $('.lang-wrapper').hide();
-                        if($('.mobile').is(':visible')){
-                            $('.bars').hide();
-                            $('.xmark').show();
-                        }else{
-                            $('.bars').show();
-                            $('.xmark').hide();
-                        }
                     }
                 }
-                
+            }
+
+            handleNavigation();
+
+            $(window).resize(function() {
                 handleNavigation();
-                
-                $(window).resize(function() {
-                    handleNavigation();
-                });
-                $('.xmark').hide();
             });
-        
-            function showmenu(){
-            $('.mobile').show(600);
+            $('.xmark').hide();
+        });
+
+        function showmenu(){
+            $('.mobile').show(200);
             $('.bars').hide();
             $('.xmark').show();
-            }
-            function hidemenu(){
-            $('.mobile').hide(600);
+        }
+        function hidemenu(){
+            $('.mobile').hide(200);
             $('.xmark').hide();
             $('.bars').show();
-            }
+        }
     </script>
 {% endblock %}

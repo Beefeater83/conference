@@ -55,6 +55,8 @@
     </div>
 
     <div class="slider">
+        <div class="slider-layer" id="layer1"></div>
+        <div class="slider-layer hidden" id="layer2"></div>
         <div class="int-conf">INTERNATIONAL</div>
         <div class="int-conf">CONFERENCE</div>
     </div>
@@ -119,14 +121,26 @@
         ];
 
         let current = 0;
+        let visibleLayer = 1;
 
-        function changeBackground() {
-            current = (current + 1) % images.length;
-            document.querySelector('.slider').style.backgroundImage = `url('${images[current]}')`;
-        }
+        document.getElementById('layer1').style.backgroundImage = `url('${images[0]}')`;
 
-        document.querySelector('.slider').style.backgroundImage = `url('${images[0]}')`;
+        setInterval(() => {
+            const next = (current + 1) % images.length;
+            const showLayer = visibleLayer === 1 ? 2 : 1;
+            const hideLayer = visibleLayer;
 
-        setInterval(changeBackground, 4000);
+            const showEl = document.getElementById(`layer${showLayer}`);
+            const hideEl = document.getElementById(`layer${hideLayer}`);
+
+            showEl.style.backgroundImage = `url('${images[next]}')`;
+
+            // Плавно меняем видимость
+            hideEl.classList.add('hidden');
+            showEl.classList.remove('hidden');
+
+            visibleLayer = showLayer;
+            current = next;
+        }, 4000);
     </script>
 {% endblock %}
