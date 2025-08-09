@@ -98,7 +98,7 @@
                 <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
                 <div class="registration">
                     <div class="reg-btn-wrapper">
-                        <a href="#">
+                        <a href="{{ path('registration', {'_locale': app.request.locale}) }}">
                             <button class="btn-a reg-btn" type="button">{{ 'event.registration'|trans }} >></button>
                         </a>
                     </div>
