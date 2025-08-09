@@ -104,43 +104,53 @@
 {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-            function handleNavigation() {
-                let screenWidth = $(window).width();
-                if(screenWidth > 800){
-                    $('.lang-wrapper').show();
-                    $('.mobile').hide();
-                    $('.bars').hide();
-                    $('.xmark').hide();
+        document.addEventListener("DOMContentLoaded", function () {
+            const langWrapper = document.querySelector(".lang-wrapper");
+            const mobile = document.querySelector(".mobile");
+            const bars = document.querySelector(".bars");
+            const xmark = document.querySelector(".xmark");
+
+            function updateView() {
+                const width = window.innerWidth;
+
+                if (width > 800) {
+                    langWrapper.style.display = "block";
+                    mobile.classList.remove("active");
+                    bars.style.display = "none";
+                    xmark.style.display = "none";
+                    xmark.classList.remove("active");
                 } else {
-                    $('.lang-wrapper').hide();
-                    if($('.mobile').is(':visible')){
-                        $('.bars').hide();
-                        $('.xmark').show();
-                    }else{
-                        $('.bars').show();
-                        $('.xmark').hide();
+                    langWrapper.style.display = "none";
+
+                    if (mobile.classList.contains("active")) {
+                        bars.style.display = "none";
+
+                        xmark.style.display = "block";
+                        xmark.classList.remove("active");
+                        void xmark.offsetWidth;
+                        xmark.classList.add("active");
+                    } else {
+                        bars.style.display = "block";
+
+                        xmark.style.display = "none";
+                        xmark.classList.remove("active");
                     }
                 }
             }
 
-            handleNavigation();
-
-            $(window).resize(function() {
-                handleNavigation();
+            bars.addEventListener("click", function () {
+                mobile.classList.add("active");
+                updateView();
             });
-            $('.xmark').hide();
-        });
 
-        function showmenu(){
-            $('.mobile').show(200);
-            $('.bars').hide();
-            $('.xmark').show();
-        }
-        function hidemenu(){
-            $('.mobile').hide(200);
-            $('.xmark').hide();
-            $('.bars').show();
-        }
+            xmark.addEventListener("click", function () {
+                mobile.classList.remove("active");
+                updateView();
+            });
+
+            window.addEventListener("resize", updateView);
+
+            updateView();
+        });
     </script>
 {% endblock %}
