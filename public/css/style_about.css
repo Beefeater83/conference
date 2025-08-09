@@ -123,6 +123,13 @@ body, html {
     font-weight: 600;
 }
 
+@media (min-width: 1800px){
+
+    .about-main{
+        font-size: 1.5em;
+    }
+}
+
 @media (max-width: 800px){
     .line-menu{
         display: none;

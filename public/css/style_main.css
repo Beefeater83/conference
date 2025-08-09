@@ -176,7 +176,7 @@ body, html {
 .int-conf{
     width: 100%;
     height: 50px;
-    font-size: 3em;
+    font-size: 2.8em;
     color: white;
     text-align: center;
     letter-spacing: 6px;
@@ -245,6 +245,95 @@ body, html {
         height: 180px;
     }
 }
+@media (min-width: 3300px){
+    .logo-top{
+        height: 580px !important;
+    }
+}
+@media (min-width: 2850px) and (max-width: 3299px){
+    .bottom-wave{
+        height: 300px !important;
+    }
+    .bottom-menu-up{
+        margin-right: 180px !important;
+    }
+    .logo-top{
+        height: 500px !important;
+    }
+    .logo img{
+        width: 350px;
+    }
+    .event-logo img{
+        width: 400px;
+    }
+    .btn{
+        width: 200px;
+        height: 50px;
+    }
+    .event-place{
+        font-size: 1.7em;
+    }
+    .table{
+        font-size: 1.3em;
+    }
+}
+@media (min-width: 2250px) and (max-width: 2849px){
+    .logo-top{
+        height: 500px;
+    }
+    .logo img{
+        width: 310px;
+    }
+    .event-logo img{
+        width: 380px;
+    }
+    .event-place{
+        font-size: 1.6em;
+    }
+    .table{
+        font-size: 1.2em;
+    }
+    .bottom-wave{
+        height: 290px !important;
+    }
+    .btn{
+        width: 180px;
+        height: 40px;
+    }
+    .bottom-menu-up{
+        margin-bottom: 40px;
+        margin-right: 100px;
+    }
+    .bottom-menu-down{
+        margin-right: 70px;
+    }
+}
+
+@media (min-width: 2000px){
+    .logo-top{
+        height: 450px;
+    }
+    .logo img{
+        width: 280px;
+    }
+    .event-logo img{
+        width: 340px;
+    }
+    .event-place{
+        font-size: 1.4em;
+    }
+    .table{
+        font-size: 1.1em;
+    }
+    .btn{
+        width: 170px;
+        height: 40px;
+    }
+    .bottom-wave{
+        height: 250px;
+    }
+}
+
 @media (max-width: 950px) and (min-width: 801px){
     .btn {
         width: 115px;
@@ -354,6 +443,26 @@ body, html {
     }
     .int-conf{
         font-size: 1.5em;
+    }
+}
+
+@media(min-width: 801px) and (max-width: 1100px){
+    .slider{
+        justify-content: start;
+        padding-top: 5%;
+    }
+    .int-conf{
+        font-size: 1.7em;
+    }
+}
+
+@media(min-width: 1101px) and (max-width: 1200px){
+    .slider{
+        justify-content: start;
+        padding-top: 15%;
+    }
+    .int-conf{
+        font-size: 2em;
     }
 }
 

@@ -192,11 +192,57 @@ body, html {
     letter-spacing: 1.2px;
 }
 
+@media (min-width: 1701px) and (max-width: 1900px){
+    .contacts-top{
+        height: 53vh;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1700px){
+    .contacts-top{
+        height: 60vh;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1300px){
+    .contacts-top{
+        height: 70vh;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px){
+    .contacts-top{
+        height: 70vh;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1000px){
+    .contacts-top{
+        height: 75vh;
+    }
+}
+@media (min-width: 2000px){
+    .contacts-block-wrapper{
+        font-size: 1.5em !important;
+    }
+}
+
+@media (min-width: 1600px){
+    .contacts-block-wrapper{
+        font-size: 1.3em !important;
+    }
+}
+
+@media (min-width: 1300px){
+    .contacts-block-wrapper{
+        font-size: 1.1em;
+    }
+}
 @media (max-width: 1070px){
     .contacts-block-wrapper{
         padding-right: 5px;
         padding-left: 20px;
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
     .contacts-name{
         margin-top: 5px;
