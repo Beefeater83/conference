@@ -1,37 +1,30 @@
 
 {% extends 'layout.html.twig' %}
 
-{% block title %}{{ 'event.registration'|trans }}{% endblock %}
+{% block title %}{{ 'button.hotel'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_registration.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_hotel.css') }}">
 {% endblock %}
 
 {% block content %}
 
     <div class="about-wrapper">
         <div class="about-side">
-            <div class="side-el conf">{{ 'event.registration'|trans }}</div>
+            <div class="side-el conf">{{ 'button.hotel'|trans }}</div>
             <div class="side-el month">{{ 'event.november'|trans }} 5-6-7, 2025</div>
             <div class="side-el turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
-            <div class="side-el organizer">{{ 'about_content.organizers'|trans }}</div>
 
             <div class="logo-wrapper">
                 <div class="logo">
-                    <img src="{{ asset('logo/apk-white.svg') }}" alt="apk">
-                </div>
-                <div class="logo">
-                    <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
-                </div>
-                <div class="logo">
-                    <img src="{{ asset('logo/asia-white.svg') }}" alt="asia">
+                    <img src="{{ asset('logo/agrofood-white.svg') }}" alt="asia">
                 </div>
             </div>
         </div>
 
         <div class="devider"></div>
 
-        <div class="registration-main">
+        <div class="hotel-main">
             <div class="line-menu">
                 <div class="btn-wrapper">
                     <a href="{{ path('main_page', {'_locale': app.request.locale}) }}" class="btn">
@@ -69,19 +62,31 @@
                     </a>
                 </div>
                 <div class="btn-wrapper">
-                    <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
-                        {{ 'button.hotel'|trans }}
-                    </a>
-                </div>
-                <div class="btn-wrapper">
                     <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="btn">
                         {{ 'button.contacts'|trans }}
                     </a>
                 </div>
             </div>
-            <div class="registration-form">
-                <iframe src="https://conference.apk-inform.com/ru/form/application?crmId=4233&languages=en&language=en&redirect=1" width="100%" height="600px"></iframe>
+
+            <div class="about-heading">About the hotel:</div>
+            <div class="about-paragraph">
+                📍 <b>Radisson Hotel Mersin 5*</b> is located in the very heart of Mersin, Türkiye, on the shore of the Mediterranean Sea, at <b>Gazi Mustafa Kemal Bulvarı No: 611, Mersin, 33140, Türkiye.</b>
             </div>
+
+            <div class="about-heading">Hotel advantages:</div>
+            <div class="about-paragraph margined">
+                <b>• Five-star comfort:</b> modern design, spacious rooms, some with panoramic sea views.
+            </div>
+            <div class="about-paragraph margined">
+                <b>• Luxurious infrastructure:</b> restaurants, bars, outdoor swimming pool, SPA center, fitness room, Turkish bath
+            </div>
+            <div class="about-paragraph margined">
+                <b>• Facilities for both business and leisure:</b> free Wi-Fi, shuttle service, free parking, 24/7 room service.
+            </div>
+            <div class="about-paragraph margined">
+                <b>• Special rates for AgroFoodSummit participants</b> — an exclusive accommodation offer.
+            </div>
+
         </div>
     </div>
 {% endblock %}

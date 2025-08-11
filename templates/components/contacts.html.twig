@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div class="btn-wrapper">
-                <a href="#" class="btn">
+                <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="btn">
                     {{ 'button.program'|trans }}
                 </a>
             </div>
@@ -42,8 +42,13 @@
                 </a>
             </div>
             <div class="btn-wrapper">
-                <a href="#" class="btn">
+                <a href="{{ path('participation', {'_locale': app.request.locale}) }}" class="btn">
                     {{ 'button.participation'|trans }}
+                </a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
+                    {{ 'button.hotel'|trans }}
                 </a>
             </div>
         </div>

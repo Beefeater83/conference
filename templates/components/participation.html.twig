@@ -1,0 +1,152 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'button.participation'|trans }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/style_participation.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="about-wrapper">
+        <div class="about-side">
+            <div class="side-el conf">{{ 'button.participation'|trans }}</div>
+            <div class="side-el month">{{ 'event.november'|trans }} 5-6-7, 2025</div>
+            <div class="side-el turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
+            <div class="side-el organizer">{{ 'about_content.organizers'|trans }}</div>
+
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <img src="{{ asset('logo/apk-white.svg') }}" alt="apk">
+                </div>
+                <div class="logo">
+                    <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+                </div>
+                <div class="logo">
+                    <img src="{{ asset('logo/asia-white.svg') }}" alt="asia">
+                </div>
+            </div>
+        </div>
+
+        <div class="devider"></div>
+
+        <div class="about-main">
+            <div class="line-menu">
+                <div class="btn-wrapper">
+                    <a href="{{ path('main_page', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.main_page'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.about'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.program'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="#" class="btn">
+                        {{ 'button.speaker'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="#" class="btn">
+                        {{ 'button.partner'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="#" class="btn">
+                        {{ 'button.sponsor_options'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.hotel'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.contacts'|trans }}
+                    </a>
+                </div>
+            </div>
+            <div class="table">
+                <div class="table-title">
+                    <div class="table-el">Name</div>
+                    <div class="table-el">Period</div>
+                    <div class="table-el">Price</div>
+                </div>
+                <div class="table-body">
+                    <div class="table-el">Early bird</div>
+                    <div class="table-el">12.08-31.08</div>
+                    <div class="table-el">700 €</div>
+                </div>
+                <div class="table-body">
+                    <div class="table-el">Standard</div>
+                    <div class="table-el">01.09-26.10</div>
+                    <div class="table-el">800 €</div>
+                </div>
+                <div class="table-body">
+                    <div class="table-el">Business</div>
+                    <div class="table-el">27.10-05.11</div>
+                    <div class="table-el">900 €</div>
+                </div>
+            </div>
+            <div class="about-paragraph">
+                <i>*The participation fee is indicated for a single participant, not including the bank fee.</i>
+            </div>
+            <div class="about-paragraph">
+                The invoice for payment in the national currency will be issued at the current exchange rate on the date of invoicing.
+            </div>
+
+            <div class="about-heading"><span class="cube"></span>PARTICIPATION TERMS</div>
+
+            <div class="about-paragraph">
+                <b class="highlight-date">* NOVEMBER 5</b> – CEO Dinner (attendance is by invitation only and <b>not included in the ticket price</b>).
+            </div>
+
+            <div class="about-heading">THE TICKET PRICE INCLUDES:</div>
+
+            <div class="about-paragraph">
+                <b class="highlight-date">NOVEMBER 6:</b>
+            </div>
+            <div class="terms-list">- Offline participation in the event for one company representative;</div>
+            <div class="terms-list">- Welcome coffee, lunch, gala dinner;</div>
+            <div class="terms-list">- Conference materials:</div>
+            <div class="terms-list">- Electronic catalog with the list of participants, including their contact details;</div>
+            <div class="terms-list">- Printed conference catalog;</div>
+            <div class="terms-list">- Presentations and event materials;</div>
+            <div class="terms-list last">- Simultaneous interpretation into Ukrainian, English, Turkish, and Russian.</div>
+
+            <div class="about-paragraph">
+                <b class="highlight-date">NOVEMBER 7</b> – Mersin port excursion;
+            </div>
+            <div class="about-paragraph">
+                <b class="highlight-date">PHOTO REPORT OF THE EVENT</b> (November 6–7);
+            </div>
+
+            <div class="about-paragraph">
+                <i>*Accommodation at the hotel is not included in the ticket price.</i>
+            </div>
+            <div class="about-paragraph">
+                <b>Payment terms:</b> 100% prepayment upon invoice issued by the organizer according to the participant’s application.
+            </div>
+            <div class="reg-btn-wrapper">
+                <a href="{{ path('registration', {'_locale': app.request.locale}) }}">
+                    <button class="btn-a reg-btn" type="button">{{ 'event.registration'|trans }} >></button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    </script>
+{% endblock %}

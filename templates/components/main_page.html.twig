@@ -69,7 +69,7 @@
                 </a>
             </div>
             <div class="btn-wrapper">
-                <a href="#" class="btn">
+                <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="btn">
                     <button class="btn" type="button">{{ 'button.program'|trans }}</button>
                 </a>
             </div>
@@ -91,12 +91,12 @@
                 </a>
             </div>
             <div class="btn-wrapper">
-                <a href="#" class="btn">
+                <a href="{{ path('participation', {'_locale': app.request.locale}) }}" class="btn">
                     <button class="btn" type="button">{{ 'button.participation'|trans }}</button>
                 </a>
             </div>
             <div class="btn-wrapper">
-                <a href="#" class="btn">
+                <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
                     <button class="btn" type="button">{{ 'button.hotel'|trans }}</button>
                 </a>
             </div>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.about-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-side{
+    width: 25%;
+    background: linear-gradient(to bottom, rgb(228, 99, 5) 0%, rgb(239, 102, 3) 15%,rgba(242,102,2,1) 100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    color: white;
+    align-items: center;
+}
+
+.side-el{
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.conf{
+    font-weight: 700;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.month, .turkey{
+    font-size: 1.1em;
+}
+
+.organizer{
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.logo-wrapper{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+}
+
+.logo{
+    margin-top: 80px;
+}
+
+.devider{
+    width: 0.2%;
+    background: #353535;
+}
+
+.hotel-main {
+    width: 74.8%;
+    padding: 20px;
+    background: white;
+    color: black;
+    font-size: 1.1em;
+    overflow-y: auto
+}
+
+
+.line-menu{
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.6em;
+    margin: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.about-paragraph, .about-heading {
+    margin-bottom: 20px;
+}
+
+.margined{
+    margin-left: 30px;
+}
+
+.about-heading{
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+.btn-wrapper{
+    margin-top: 10px;
+}
+
+.btn{
+    color: black;
+    text-decoration-color: rgba(242,102,2,1);
+    text-underline-offset: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.btn:hover{
+    font-weight: 600;
+}
+
+.hotel{
+
+}
+
+@media (max-width: 800px){
+    .line-menu{
+        display: none;
+    }
+    .about-side{
+        display: none;
+    }
+}

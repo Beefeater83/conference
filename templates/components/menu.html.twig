@@ -62,6 +62,11 @@
                 </a>
             </div>
             <div class="menu-el">
+                <a href="{{ path('program', {'_locale': app.request.locale}) }}">
+                    {{ 'button.program'|trans }}
+                </a>
+            </div>
+            <div class="menu-el">
                 <a href="#">
                     {{ 'button.speaker'|trans }}
                 </a>
@@ -77,8 +82,13 @@
                 </a>
             </div>
             <div class="menu-el">
-                <a href="#">
+                <a href="{{ path('participation', {'_locale': app.request.locale}) }}">
                     {{ 'button.participation'|trans }}
+                </a>
+            </div>
+            <div class="menu-el">
+                <a href="{{ path('hotel', {'_locale': app.request.locale}) }}">
+                    {{ 'button.hotel'|trans }}
                 </a>
             </div>
             <div class="menu-el">
