@@ -85,6 +85,10 @@ body, html {
     flex-wrap: wrap;
 }
 
+.panorama img{
+    width: 100%;
+}
+
 .about-paragraph, .about-heading {
     margin-bottom: 20px;
 }
@@ -113,15 +117,43 @@ body, html {
     font-weight: 600;
 }
 
-.hotel{
-
+.photo-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.photo-left, .photo-center, .photo-right{
+    width: 30%;
+}
+.photo-left img, .photo-center img, .photo-right img{
+    width: 100%;
 }
 
+
 @media (max-width: 800px){
+    .hotel-main{
+        width: 95%;
+    }
+    .panorama{
+        display: none;
+    }
     .line-menu{
         display: none;
     }
     .about-side{
         display: none;
+    }
+    .photo-block{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .photo-left, .photo-right{
+        display: none;
+    }
+    .photo-center{
+        width: 90%;
     }
 }
