@@ -89,13 +89,13 @@
         </div>
         <div class="mob-logo-wrapper">
             <div class="mob-logo">
-                <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                <img src="{{ asset('logo/apk-white.svg') }}" alt="apk">
             </div>
             <div class="mob-logo">
                 <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
             </div>
             <div class="mob-logo">
-                <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                <img src="{{ asset('logo/asia-white.svg') }}" alt="asia">
             </div>
         </div>
     </div>
@@ -105,7 +105,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const langWrapper = document.querySelector(".lang-wrapper");
+          //  const langWrapper = document.querySelector(".lang-wrapper");
             const mobile = document.querySelector(".mobile");
             const bars = document.querySelector(".bars");
             const xmark = document.querySelector(".xmark");
@@ -114,13 +114,13 @@
                 const width = window.innerWidth;
 
                 if (width > 800) {
-                    langWrapper.style.display = "block";
+                  //  langWrapper.style.display = "block";
                     mobile.classList.remove("active");
                     bars.style.display = "none";
                     xmark.style.display = "none";
                     xmark.classList.remove("active");
                 } else {
-                    langWrapper.style.display = "none";
+                  //  langWrapper.style.display = "none";
 
                     if (mobile.classList.contains("active")) {
                         bars.style.display = "none";
