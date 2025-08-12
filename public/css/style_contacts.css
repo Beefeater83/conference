@@ -271,6 +271,7 @@ body, html {
 }
 
 @media (max-width: 800px){
+
     .line-menu{
         display: none;
     }
@@ -318,5 +319,9 @@ body, html {
     }
     .registration{
         margin-bottom: 30px;
+    }
+    .contacts, a.contacts{
+        text-decoration: none !important;
+        color: white !important;
     }
 }
