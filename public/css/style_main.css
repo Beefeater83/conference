@@ -96,6 +96,17 @@ body, html {
     flex-direction: column;
 }
 
+.date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.date-first{
+    margin-right: 7px
+}
+
 .month-figure, .days-figure{
     text-align: center;
     font-size: 1.6em;
@@ -353,6 +364,14 @@ body, html {
     .month, .days{
         font-size: 0.6em;
     }
+    .date{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .date-first{
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 800px){
@@ -398,6 +417,14 @@ body, html {
     .event-place{
         font-size: 0.9em;
         text-align: center;
+    }
+    .date{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .date-first{
+        margin-right: 0;
     }
 }
 

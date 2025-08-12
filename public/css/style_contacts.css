@@ -67,6 +67,10 @@ body, html {
     box-sizing: border-box;
 }
 
+.contacts, a.contacts{
+    text-decoration: none;
+}
+
 .logo{
     margin-right: 20px;
 }
@@ -311,5 +315,8 @@ body, html {
     .bg-layer {
         background-color: rgba(0, 0, 0, 0.6);
         background-blend-mode: darken;
+    }
+    .registration{
+        margin-bottom: 30px;
     }
 }

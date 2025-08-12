@@ -6,8 +6,10 @@ namespace App\Controller\WebApp;
 
 use App\Service\CalculationService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\Routing\Attribute\Route;
 
 class MainController extends AbstractController
@@ -67,5 +69,19 @@ class MainController extends AbstractController
     {
 
         return $this->render('components/participation.html.twig', []);
+    }
+
+    #[Route('/download/sponsor-options', name: 'download_sponsor_options')]
+    public function downloadSponsorOptions(): BinaryFileResponse
+    {
+        $filePath = $this->getParameter('kernel.project_dir') . '/public/pdf/sponsor_options.pdf';
+
+        $response = new BinaryFileResponse($filePath);
+        $response->setContentDisposition(
+            ResponseHeaderBag::DISPOSITION_ATTACHMENT,
+            'AgroFood_sponsor_options.pdf'
+        );
+
+        return $response;
     }
 }
