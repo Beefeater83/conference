@@ -1,0 +1,176 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ 'button.speaker'|trans }}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/style_speakers.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="about-wrapper">
+        <div class="about-side">
+            <div class="side-el conf">{{ 'button.speaker'|trans }}</div>
+            <div class="side-el month">{{ 'event.november'|trans }} 5-6-7, 2025</div>
+            <div class="side-el turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
+
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <img src="{{ asset('logo/agrofood-white.svg') }}" alt="asia">
+                </div>
+            </div>
+        </div>
+
+        <div class="devider"></div>
+
+        <div class="speakers-main">
+            <div class="line-menu">
+                <div class="btn-wrapper">
+                    <a href="{{ path('main_page', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.main_page'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.about'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.program'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper" style="display: none;">
+                    <a href="#" class="btn">
+                        {{ 'button.partner'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('download_sponsor_options') }}" class="btn" title="Download PDF">
+                        {{ 'button.sponsor_options'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('participation', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.participation'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.hotel'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.contacts'|trans }}
+                    </a>
+                </div>
+            </div>
+
+            <div class="speaker-cards-outer-wrapper">
+                <div class="speaker-cards-row-wrapper">
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder CEO and founder founder CEO and founder founder CEO and founder founder CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder CEO and founder founder
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-cards-row-wrapper">
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card" style="visibility: hidden">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder CEO and founder founder CEO and founder founder CEO and founder founder CEO and founder founder
+                        </div>
+                    </div>
+                    <div class="speaker-card" style="visibility: hidden">
+                        <div class="card-photo">
+                            <img src="{{ asset('speakers/speaker1.png') }}" alt="speaker">
+                        </div>
+                        <div class="card-name">ОКСАНА ПРОСОЛЕНКО</div>
+                        <div class="card-position">
+                            CEO and founder founder CEO and founder founder
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+    </script>
+{% endblock %}
