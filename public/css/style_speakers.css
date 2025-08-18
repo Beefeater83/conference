@@ -104,32 +104,24 @@ body, html {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    border: 1px solid red;
-}
-
-.speaker-cards-row-wrapper{
-    width: 100%;
-    height: auto;
-    display: flex;
     flex-direction: row;
-    border: 1px solid orangered;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .speaker-card{
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
-    width: 18%;
+    width: 200px;
     height: auto;
+    margin: 20px;
 }
 .card-photo{
     width: 100%;
-    flex: 0 0 70%;
+    aspect-ratio: 3/4;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -140,7 +132,6 @@ body, html {
 }
 
 .card-name{
-    border: 1px solid green;
     padding: 2px;
     font-size: 12px;
     font-weight: 600;
@@ -148,14 +139,46 @@ body, html {
 }
 
 .card-position{
-    border: 1px solid brown;
     padding: 2px;
     font-size: 12px;
     text-align: center;
     font-style: italic;
     overflow: hidden;
 }
+@media (min-width: 3000px) {
+    .speaker-card{
+        width: 370px;
+    }
+}
+
+@media (min-width: 2500px) {
+    .speaker-card{
+        width: 320px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .speaker-card{
+        width: 250px;
+    }
+}
 @media (max-width: 1300px){
+    .speaker-card{
+        width: 180px;
+        margin: 15px;
+    }
+    .card-name{
+        font-size: 11px;
+    }
+    .card-position{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 900px){
+    .speaker-card{
+        width: 150px;
+    }
     .card-name{
         font-size: 11px;
     }
@@ -165,6 +188,20 @@ body, html {
 }
 
 @media (max-width: 800px){
+    .devider{
+        display: none;
+    }
+    .speaker-cards-outer-wrapper{
+        justify-content: space-around;
+    }
+    .speakers-main {
+        width: 90%;
+        font-size: 1em;
+        padding-top: 40px;
+    }
+    .speaker-card{
+        width: 200px;
+    }
     .program-main{
         width: 90%;
     }
@@ -173,6 +210,12 @@ body, html {
     }
     .about-side{
         display: none;
+    }
+}
+
+@media (max-width: 550px){
+    .speaker-card{
+        width: 250px;
     }
 }
 

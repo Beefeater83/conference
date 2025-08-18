@@ -130,6 +130,9 @@ body, html {
 
 
 @media (max-width: 800px){
+    .devider{
+        display: none;
+    }
     .hotel-main{
         width: 95%;
     }

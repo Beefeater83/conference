@@ -231,6 +231,9 @@ body, html {
 
 
 @media (max-width: 800px){
+    .devider{
+        display: none;
+    }
     .line-menu{
         display: none;
     }

@@ -110,6 +110,9 @@ body, html {
 }
 
 @media (max-width: 800px){
+    .devider{
+        display: none;
+    }
     .program-main{
         width: 90%;
     }
