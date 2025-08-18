@@ -97,44 +97,45 @@
                 </div>
             </div>
             <div class="about-paragraph">
-                <i>*The participation fee is indicated for a single participant, not including the bank fee.</i>
+                <i>{{ 'participation_terms.note_fee'|trans }}</i>
             </div>
             <div class="about-paragraph">
-                The invoice for payment in the national currency will be issued at the current exchange rate on the date of invoicing.
+                {{ 'participation_terms.note_invoice'|trans }}
             </div>
 
-            <div class="about-heading"><span class="cube"></span>PARTICIPATION TERMS</div>
+            <div class="about-heading"><span class="cube"></span>{{ 'participation_terms.heading'|trans }}</div>
 
             <div class="about-paragraph">
-                <b class="highlight-date">* NOVEMBER 5</b> – CEO Dinner (attendance is by invitation only and <b>not included in the ticket price</b>).
+                <b class="highlight-date">{{ 'participation_terms.nov5.title'|trans }}</b> – {{ 'participation_terms.nov5.description'|trans|raw }}
             </div>
 
-            <div class="about-heading">THE TICKET PRICE INCLUDES:</div>
+            <div class="about-heading">{{ 'participation_terms.includes_heading'|trans }}</div>
 
             <div class="about-paragraph">
-                <b class="highlight-date">NOVEMBER 6:</b>
+                <b class="highlight-date">{{ 'participation_terms.nov6.title'|trans }}</b>
             </div>
-            <div class="terms-list">- Offline participation in the event for one company representative;</div>
-            <div class="terms-list">- Welcome coffee, lunch, gala dinner;</div>
-            <div class="terms-list">- Conference materials:</div>
-            <div class="terms-list">- Electronic catalog with the list of participants, including their contact details;</div>
-            <div class="terms-list">- Printed conference catalog;</div>
-            <div class="terms-list">- Presentations and event materials;</div>
-            <div class="terms-list last">- Simultaneous interpretation into Ukrainian, English, Turkish, and Russian.</div>
+            <div class="terms-list">{{ 'participation_terms.nov6.items.1'|trans }}</div>
+            <div class="terms-list">{{ 'participation_terms.nov6.items.2'|trans }}</div>
+            <div class="terms-list">{{ 'participation_terms.nov6.items.3'|trans }}</div>
+            <div class="terms-list">{{ 'participation_terms.nov6.items.4'|trans }}</div>
+            <div class="terms-list">{{ 'participation_terms.nov6.items.5'|trans }}</div>
+            <div class="terms-list">{{ 'participation_terms.nov6.items.6'|trans }}</div>
+            <div class="terms-list last">{{ 'participation_terms.nov6.items.7'|trans }}</div>
 
             <div class="about-paragraph">
-                <b class="highlight-date">NOVEMBER 7</b> – Mersin port excursion;
+                <b class="highlight-date">{{ 'participation_terms.nov7.title'|trans }}</b> – {{ 'participation_terms.nov7.description'|trans }}
             </div>
             <div class="about-paragraph">
-                <b class="highlight-date">PHOTO REPORT OF THE EVENT</b> (November 6–7);
+                <b class="highlight-date">{{ 'participation_terms.photo_report.title'|trans }}</b> ({{ 'participation_terms.photo_report.dates'|trans }});
             </div>
 
             <div class="about-paragraph">
-                <i>*Accommodation at the hotel is not included in the ticket price.</i>
+                <i>{{ 'participation_terms.note_accommodation'|trans }}</i>
             </div>
             <div class="about-paragraph">
-                <b>Payment terms:</b> 100% prepayment upon invoice issued by the organizer according to the participant’s application.
+                <b>{{ 'participation_terms.payment_terms.title'|trans }}</b> {{ 'participation_terms.payment_terms.description'|trans }}
             </div>
+
             <div class="reg-btn-wrapper">
                 <a href="{{ path('registration', {'_locale': app.request.locale}) }}">
                     <button class="btn-a reg-btn" type="button">{{ 'event.registration'|trans }} >></button>
