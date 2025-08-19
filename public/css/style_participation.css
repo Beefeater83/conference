@@ -60,6 +60,10 @@ body, html {
     margin-bottom: 30px;
 }
 
+.logo-apk:hover, .logo-soybean:hover{
+    cursor: pointer;
+}
+
 .devider{
     width: 0.2%;
     background: rgba(242,102,2,1);

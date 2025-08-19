@@ -75,6 +75,10 @@ body, html {
     margin-right: 20px;
 }
 
+.logo-apk:hover, .logo-soybean:hover{
+    cursor: pointer;
+}
+
 .logo img{
     width: 150px;
 }
