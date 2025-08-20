@@ -88,8 +88,16 @@
     text-align: center;
 }
 
+.mob-logo {
+    display: block;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
 .mob-logo img {
     width: 80%;
+    display: block;
+    margin: 0 auto;
 }
 
 .bars, .xmark {
