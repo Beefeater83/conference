@@ -93,7 +93,7 @@ class MainController extends AbstractController
         $response = new BinaryFileResponse($filePath);
         $response->setContentDisposition(
             ResponseHeaderBag::DISPOSITION_ATTACHMENT,
-            'AgroFood_sponsor_advertising_options.pdf'
+            'AgroFoodSummit_sponsorship_advertising.pdf'
         );
 
         return $response;
