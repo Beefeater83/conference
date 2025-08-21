@@ -86,3 +86,6 @@ participation_terms:
   payment_terms:
     title: "Условия оплаты:"
     description: "100% предоплата по счету, выставленному организатором согласно заявке участника."
+
+partners:
+  media_partner: "МЕДИА ПАРТНЕРЫ"

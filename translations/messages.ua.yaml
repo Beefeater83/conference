@@ -86,3 +86,6 @@ participation_terms:
   payment_terms:
     title: "Умови оплати:"
     description: "100% передоплата за рахунком, виставленим організатором відповідно до заявки учасника."
+
+partners:
+  media_partner: "МЕДІА ПАРТНЕРИ"

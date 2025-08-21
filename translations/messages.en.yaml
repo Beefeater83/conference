@@ -86,3 +86,6 @@ participation_terms:
   payment_terms:
     title: "Payment terms:"
     description: "100% prepayment upon invoice issued by the organizer according to the participant’s application."
+
+partners:
+  media_partner: "MEDIA PARTNERS"

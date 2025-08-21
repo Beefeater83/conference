@@ -78,6 +78,13 @@ class MainController extends AbstractController
         return $this->render('components/speakers.html.twig', []);
     }
 
+    #[Route('/{_locale}/partners', name: 'partners', requirements: ['_locale' => 'en|ru|ua'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    public function partners(Request $request): Response
+    {
+
+        return $this->render('components/partners.html.twig', []);
+    }
+
     #[Route('/download/sponsor-options', name: 'download_sponsor_options')]
     public function downloadSponsorOptions(): BinaryFileResponse
     {

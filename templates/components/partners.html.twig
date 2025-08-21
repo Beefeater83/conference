@@ -1,17 +1,17 @@
 
 {% extends 'layout.html.twig' %}
 
-{% block title %}{{ 'button.hotel'|trans }}{% endblock %}
+{% block title %}{{ 'button.partner'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_hotel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_partner.css') }}">
 {% endblock %}
 
 {% block content %}
 
     <div class="about-wrapper">
         <div class="about-side">
-            <div class="side-el conf">{{ 'button.hotel'|trans }}</div>
+            <div class="side-el conf">{{ 'button.partner'|trans }}</div>
             <div class="side-el month">{{ 'event.november'|trans }} 5-6-7, 2025</div>
             <div class="side-el turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
 
@@ -24,7 +24,7 @@
 
         <div class="devider"></div>
 
-        <div class="hotel-main">
+        <div class="partner-main">
             <div class="line-menu">
                 <div class="btn-wrapper">
                     <a href="{{ path('main_page', {'_locale': app.request.locale}) }}" class="btn">
@@ -47,11 +47,6 @@
                     </a>
                 </div>
                 <div class="btn-wrapper">
-                    <a href="{{ path('partners', {'_locale': app.request.locale}) }}" class="btn">
-                        {{ 'button.partner'|trans }}
-                    </a>
-                </div>
-                <div class="btn-wrapper">
                     <a href="{{ path('download_sponsor_options') }}" class="btn" title="Download PDF">
                         {{ 'button.sponsor_options'|trans }}
                     </a>
@@ -62,32 +57,43 @@
                     </a>
                 </div>
                 <div class="btn-wrapper">
+                    <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
+                        {{ 'button.hotel'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
                     <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="btn">
                         {{ 'button.contacts'|trans }}
                     </a>
                 </div>
             </div>
-
-            <div class="about-heading">{{ 'hotel.about.heading'|trans }}</div>
-            <div class="about-paragraph">{{ 'hotel.about.paragraph'|trans|raw }}</div>
-
-            <div class="about-heading">{{ 'hotel.advantages.heading'|trans }}</div>
-            <div class="about-paragraph margined">{{ 'hotel.advantages.comfort'|trans|raw }}</div>
-            <div class="about-paragraph margined">{{ 'hotel.advantages.infrastructure'|trans|raw }}</div>
-            <div class="about-paragraph margined">{{ 'hotel.advantages.facilities'|trans|raw }}</div>
-            <div class="about-paragraph margined">{{ 'hotel.advantages.special_rates'|trans|raw }}</div>
-            <div class="photo-block">
-                <div class="photo-left">
-                    <img src="{{ asset('hotel/hotel-left.PNG') }}" alt="panorama">
+            <div class="partners-main-wrapper">
+                <div class="partners-inner-wrapper">
+                    <div class="partner"><span class="cube"></span>{{ 'about_content.organizers'|trans }}</div>
+                    <div class="line"></div>
                 </div>
-                <div class="photo-center">
-                    <img src="{{ asset('hotel/hotel-center.PNG') }}" alt="panorama">
+                <div class="partner-logo-wrapper">
+                    <a href="https://www.apk-inform.com/uk" target="_blank" class="partner-logo logo-link">
+                        <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                    </a>
+                    <a href="https://ukraine-pulse.org" target="_blank" class="partner-logo logo-link">
+                        <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+                    </a>
+                    <a href="#" class="partner-logo">
+                        <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                    </a>
                 </div>
-                <div class="photo-right">
-                    <img src="{{ asset('hotel/hotel-right.PNG') }}" alt="panorama">
+
+                <div class="partners-inner-wrapper">
+                    <div class="partner"><span class="cube"></span>{{ 'partners.media_partner'|trans }}</div>
+                    <div class="line"></div>
+                </div>
+                <div class="partner-logo-wrapper">
+                    <a href="https://millingmea.com" target="_blank" class="partner-logo logo-link">
+                        <img src="{{ asset('logo/millingmea.jpg') }}" alt="logo">
+                    </a>
                 </div>
             </div>
-
         </div>
     </div>
 {% endblock %}
