@@ -146,6 +146,7 @@ body, html {
     gap: 50px;
     width: 100%;
     height: 80px;
+    flex-wrap: wrap;
 }
 
 .partner-logo {
@@ -160,12 +161,21 @@ body, html {
     display: block;
 }
 
+.seeds-logo img, .aga-logo img{
+    height: 80px;
+    width: auto;
+}
+
 .logo-link:hover{
     cursor: pointer;
 }
 
 
 @media (max-width: 800px){
+    .seeds-logo img, .aga-logo img{
+        height: auto;
+        width: 100px;
+    }
     .devider{
         display: none;
     }
