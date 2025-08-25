@@ -9,20 +9,28 @@
 
 {% block content %}
     <div class="logo-top">
-        <div class="logo-wrapper">
-            <div class="logo logo-apk" onclick="window.open('https://www.apk-inform.com/uk', '_blank')">
-                <img src="{{ asset('logo/apk.svg') }}" alt="apk">
-            </div>
-            <div class="logo logo-soybean" onclick="window.open('https://ukraine-pulse.org', '_blank')">
-                <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
-            </div>
-            <div class="logo">
-                <img src="{{ asset('logo/asia.svg') }}" alt="asia">
-            </div>
-        </div>
 
         <div class="event-info-wrapper">
             <div class="event-place">
+                <div class="logo-wrapper">
+                    <div class="organizers-title">ORGANIZERS</div>
+                    <div class="organizers-apk-beans">
+                        <div class="logo logo-apk" onclick="window.open('https://www.apk-inform.com/uk', '_blank')">
+                            <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                        </div>
+                        <div class="logo logo-soybean" onclick="window.open('https://ukraine-pulse.org', '_blank')">
+                            <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                    </div>
+                    <div class="organizers-title">OFFICIAL PARTNER</div>
+                    <div class="logo logo-apk" onclick="window.open('https://globalpulses.com', '_blank')">
+                        <img src="{{ asset('logo/gpc.jpg') }}" alt="gpc">
+                    </div>
+                </div>
+
                 <div class="date">
                     <div class="date-first">{{ 'event.november'|trans }}</div>
                     <div>5-6-7, 2025</div>
@@ -33,6 +41,12 @@
                 <img src="{{ asset('logo/agrofood.svg') }}" alt="agrofood">
             </div>
             <div class="event-date-registration">
+                <div class="date-new">
+                    <div class="date-first">{{ 'event.november'|trans }}</div>
+                    <div>5-6-7, 2025</div>
+                </div>
+                <div class="turkey-new">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
+
                 <div class="table">
                     <div class="before-start">{{ 'event.before_start'|trans }}</div>
                     <div class="day-month-wrapper">

@@ -26,14 +26,23 @@ body, html {
 
 .logo-wrapper{
     display: flex;
-    margin-top: 5px;
-    width: 50%;
-    height: 20%;
-    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
     align-items: center;
 }
+.organizers-title{
+    font-size: 0.8em;
+    margin-top: 10px;
+}
 .logo img{
-    width: 150px;
+    width: 120px;
+}
+
+.organizers-apk-beans{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
 }
 
 .logo-apk:hover, .logo-soybean:hover{
@@ -45,28 +54,28 @@ body, html {
     width: 100%;
 }
 .event-place, .event-date-registration{
-    width: 30%;
+    width: 35%;
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    height: 60%;
+    height: 100%;
     align-items: center;
     letter-spacing: 2px;
     font-size: 1.1em;
 }
-
-.turkey{
-    margin-top: 10px;
+.event-date-registration{
+    margin-top: 25px
 }
 
 .event-logo{
-    width: 40%;
+    width: 30%;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 
 .event-logo img{
-    width: 215px;
+    width: 250px;
 }
 
 .event-date-registration{
@@ -100,7 +109,7 @@ body, html {
     flex-direction: column;
 }
 
-.date{
+.date, .date-new{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -261,49 +270,48 @@ body, html {
         height: 180px;
     }
 }
-@media (min-width: 3300px){
-    .logo-top{
-        height: 580px !important;
-    }
-}
-@media (min-width: 2850px) and (max-width: 3299px){
-    .bottom-wave{
-        height: 300px !important;
-    }
-    .bottom-menu-up{
-        margin-right: 180px !important;
+@media (min-width: 2000px){
+    .event-date-registration{
+        justify-content: flex-start;
+        margin-top: 40px;
     }
     .logo-top{
-        height: 500px !important;
+        height: 440px;
     }
     .logo img{
-        width: 350px;
+        width: 170px;
     }
     .event-logo img{
-        width: 400px;
+        width: 430px;
     }
-    .btn{
-        width: 200px;
-        height: 50px;
-    }
-    .event-place{
-        font-size: 1.7em;
+    .date-new, .turkey-new{
+        font-size: 1.4em;
     }
     .table{
-        font-size: 1.3em;
+        font-size: 1.1em;
+    }
+    .btn{
+        width: 170px;
+        height: 40px;
+    }
+    .bottom-wave{
+        height: 250px;
+    }
+    .slider{
+        padding-top: 13% !important;
     }
 }
+
+
 @media (min-width: 2250px) and (max-width: 2849px){
+    .event-date-registration{
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
     .logo-top{
-        height: 500px;
+        height: 460px;
     }
-    .logo img{
-        width: 310px;
-    }
-    .event-logo img{
-        width: 380px;
-    }
-    .event-place{
+    .date-new, .turkey-new{
         font-size: 1.6em;
     }
     .table{
@@ -325,33 +333,35 @@ body, html {
     }
 }
 
-@media (min-width: 2000px){
-    .logo-top{
-        height: 440px;
-    }
-    .logo img{
-        width: 280px;
-    }
-    .event-logo img{
-        width: 340px;
-    }
-    .event-place{
-        font-size: 1.4em;
-    }
-    .table{
-        font-size: 1.1em;
-    }
-    .btn{
-        width: 170px;
-        height: 40px;
+@media (min-width: 2850px) and (max-width: 3500px){
+    .event-date-registration{
+        justify-content: flex-start;
+        margin-top: 20px;
     }
     .bottom-wave{
-        height: 250px;
+        height: 300px !important;
     }
-    .slider{
-        padding-top: 13% !important;
+    .bottom-menu-up{
+        margin-right: 180px !important;
+    }
+    .logo-top{
+        height: 500px !important;
+    }
+    .event-logo img{
+        width: 500px;
+    }
+    .btn{
+        width: 200px;
+        height: 50px;
+    }
+    .date-new, .turkey-new{
+        font-size: 1.7em;
+    }
+    .table{
+        font-size: 1.3em;
     }
 }
+
 
 @media (max-width: 950px) and (min-width: 801px){
     .btn {
@@ -372,17 +382,21 @@ body, html {
     .month, .days{
         font-size: 0.6em;
     }
-    .date{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    
     .date-first{
         margin-right: 0;
     }
 }
+@media (min-width: 801px) {
+    .turkey, .date{
+        display: none;
+    }
+}
 
 @media (max-width: 800px){
+    .date-new, .turkey-new, .logo-wrapper{
+        display: none;
+    }
     .slider{
         justify-content: center;
     }
@@ -395,9 +409,6 @@ body, html {
     .bottom-wave{
         display: none;
     }
-    .logo-wrapper{
-        display: none;
-    }
     .event-info-wrapper{
         padding-top: 30px;
         align-items: center;
@@ -405,11 +416,15 @@ body, html {
     .event-place, .event-logo .event-date-registration{
         width: 32%;
     }
+    .event-place, .event-date-registration{
+        justify-content: center;
+        margin-top: 0;
+    }
     .event-logo img{
         width: 180px;
     }
     .logo-top{
-        height: 200px;
+        height: 180px;
     }
 
     .month, .days{
@@ -454,7 +469,10 @@ body, html {
         width: 160px;
     }
     .event-info-wrapper{
-        padding-top: 50px;
+        padding-top: 45px;
+    }
+    .slider{
+        top: 200px;
     }
     .before-start{
         font-size: 0.8em;
@@ -482,6 +500,7 @@ body, html {
     .int-conf{
         font-size: 1.5em;
     }
+
 }
 
 @media(min-width: 801px) and (max-width: 1100px){

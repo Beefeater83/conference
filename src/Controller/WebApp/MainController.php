@@ -119,7 +119,7 @@ class MainController extends AbstractController
         return $this->render('components/admin.html.twig', []);
     }
 
-    #[Route('/{_locale}/admin/google-check', name: 'admin_google_check')]
+    #[Route('/admin/google-check', name: 'admin_google_check')]
     public function googleCheck(Request $request, ClientRegistry $clientRegistry): Response
     {
         $client = $clientRegistry->getClient('google');
@@ -132,7 +132,7 @@ class MainController extends AbstractController
 
         $request->getSession()->set('oauth_user', $googleUser->getEmail());
 
-        return $this->redirectToRoute('admin', ['_locale' => $request->getLocale()]);
+        return $this->redirectToRoute('admin');
     }
 
     #[Route('/{_locale}/admin/upload', name: 'admin_upload', requirements: ['_locale' => 'en|ru|ua'], methods: ['POST'])]
