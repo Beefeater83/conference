@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\Routing\Attribute\Route;
+use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 
 class MainController extends AbstractController
 {
@@ -97,5 +98,57 @@ class MainController extends AbstractController
         );
 
         return $response;
+    }
+
+    #[Route('/{_locale}/admin', name: 'admin', requirements: ['_locale' => 'en|ru|ua'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    public function admin(Request $request, ClientRegistry $clientRegistry): Response
+    {
+        $allowedEmails = explode(',', $_ENV['ALLOWED_EMAILS'] ?? '');
+        $session = $request->getSession();
+        $userEmail = $session->get('oauth_user');
+
+        if (!$userEmail) {
+            $client = $clientRegistry->getClient('google');
+            return $client->redirect([], []);
+        }
+
+        if (!in_array($userEmail, $allowedEmails)) {
+            throw $this->createAccessDeniedException('Access denied');
+        }
+
+        return $this->render('components/admin.html.twig', []);
+    }
+
+    #[Route('/{_locale}/admin/google-check', name: 'admin_google_check')]
+    public function googleCheck(Request $request, ClientRegistry $clientRegistry): Response
+    {
+        $client = $clientRegistry->getClient('google');
+        $googleUser = $client->fetchUser();
+
+        $allowedEmails = explode(',', $_ENV['ALLOWED_EMAILS'] ?? '');
+        if (!in_array($googleUser->getEmail(), $allowedEmails)) {
+            throw $this->createAccessDeniedException('Access denied');
+        }
+
+        $request->getSession()->set('oauth_user', $googleUser->getEmail());
+
+        return $this->redirectToRoute('admin', ['_locale' => $request->getLocale()]);
+    }
+
+    #[Route('/{_locale}/admin/upload', name: 'admin_upload', requirements: ['_locale' => 'en|ru|ua'], methods: ['POST'])]
+    public function upload(Request $request): Response
+    {
+        $file = $request->files->get('program_file');
+
+        if ($file && $file->getMimeType() === 'image/png') {
+            $targetDir = $this->getParameter('kernel.project_dir') . '/public/program';
+            $file->move($targetDir, 'program1.png');
+
+            $this->addFlash('success', 'Файл успешно загружен!');
+        } else {
+            $this->addFlash('error', 'Загрузи валидный PNG файл.');
+        }
+
+        return $this->redirectToRoute('admin', ['_locale' => $request->getLocale()]);
     }
 }
