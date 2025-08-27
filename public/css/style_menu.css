@@ -95,9 +95,15 @@
 }
 
 .mob-logo img {
-    width: 80%;
+    width: 55%;
     display: block;
     margin: 0 auto;
+}
+
+.menu-organizer{
+    letter-spacing: 2px;
+    color: #656060;
+    margin-top: 10px;
 }
 
 .bars, .xmark {
