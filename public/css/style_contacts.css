@@ -170,14 +170,6 @@ body, html {
     opacity: 0.9;
 }
 
-.reg-btn-wrapper {
-    display: inline-block;
-    padding: 2px;
-    border-radius: 40px;
-    background: linear-gradient(135deg, rgba(0,0,0,0.02) 5%,rgba(0,0,0,0.65) 17%,rgba(0,0,0,0) 24%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 29%,rgba(0,0,0,0) 61%,rgba(0,0,0,0) 78%,rgba(0,0,0,0.12) 83%,rgba(0,0,0,0.44) 97%);
-    opacity: 0.9;
-}
-
 .btn-a {
     width: 160px;
     height: 35px;

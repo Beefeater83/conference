@@ -465,6 +465,9 @@ body, html {
 }
 
 @media (max-width: 500px){
+    .event-place{
+        font-size: 0.6em;
+    }
     .event-logo img{
         width: 160px;
     }
@@ -486,6 +489,9 @@ body, html {
 }
 
 @media (max-width: 450px){
+    .event-place{
+        font-size: 0.5em;
+    }
     .event-logo img{
         width: 150px;
     }
