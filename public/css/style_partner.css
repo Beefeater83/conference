@@ -171,8 +171,15 @@ body, html {
     cursor: pointer;
 }
 
+.mersin-logo-wrapper{
+    margin-bottom: 20px;
+}
+
 
 @media (max-width: 800px){
+    .mersin-logo-wrapper{
+        margin-bottom: 0;
+    }
     .seeds-logo img, .aga-logo img{
         height: auto;
         width: 100px;
