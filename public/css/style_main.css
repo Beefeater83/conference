@@ -11,6 +11,9 @@ body, html {
     overflow-x: hidden;
 }
 .line-menu{
+    position: fixed;
+    top: 0;
+    z-index: 10;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -46,6 +49,9 @@ body, html {
 }
 
 .logo-top{
+    position: sticky;
+    top: 50px;
+    z-index: 9;
     width: 100%;
     height: 260px;
     background: url("../icons/top.png") no-repeat bottom center;
@@ -54,8 +60,6 @@ body, html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
-    z-index: 2;
 }
 
 .event-info-wrapper{
@@ -63,8 +67,8 @@ body, html {
     width: 100%;
 }
 .event-place {
-    width: 35%;              /* оставляем как есть */
-    height: 70%;             /* оставляем как есть */
+    width: 35%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +84,7 @@ body, html {
     gap: 8px;
     font-size: 1.2em;
     font-weight: 600;
-    color: #f48232;          /* яркий акцент */
+    color: #f48232;
     margin-bottom: 12px;
 }
 
@@ -230,15 +234,19 @@ body, html {
     }
 }
 
+.content-wrapper {
+    margin-top: 310px;
+}
+
 
 .slider{
-    position: absolute;
-    height: 250px;
-    top: 220px;
+    position: relative;
+    z-index: 1;
+    margin-top: -350px;
+    height: 230px;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
