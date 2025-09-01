@@ -5,10 +5,9 @@ body, html {
     padding: 0;
     font-family: "Montserrat", serif;
     width: 100vw;
-    min-height: 100vh;
+    height: auto;
     background: white;
     position: relative;
-    overflow-x: hidden;
 }
 .line-menu{
     position: fixed;
@@ -49,8 +48,8 @@ body, html {
 }
 
 .logo-top{
-    position: sticky;
-    top: 50px;
+    position: fixed;
+    top: 30px;
     z-index: 9;
     width: 100%;
     height: 260px;
@@ -60,6 +59,7 @@ body, html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 
 .event-info-wrapper{
@@ -84,12 +84,12 @@ body, html {
     gap: 8px;
     font-size: 1.2em;
     font-weight: 600;
-    color: #f48232;
+    color: #000;
     margin-bottom: 12px;
 }
 
 .date-first {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .turkey {
@@ -99,8 +99,8 @@ body, html {
 }
 
 .int-conf {
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 1.8em;
+    font-weight: 600;
     letter-spacing: 6px;
     line-height: 1.2;
     text-transform: uppercase;
@@ -108,11 +108,11 @@ body, html {
 
 .international {
     margin-top: 5px;
-    color: #f48232;
+    color: #000;
 }
 
 .conference {
-    color: #333;
+    color: #444;
 }
 
 .event-date-registration{
@@ -234,15 +234,15 @@ body, html {
     }
 }
 
-.content-wrapper {
-    margin-top: 310px;
+.content-wrapper{
+    margin-top: 260px;
 }
 
 
 .slider{
     position: relative;
     z-index: 1;
-    margin-top: -350px;
+    margin-top: -50px;
     height: 230px;
     bottom: 0;
     left: 0;
@@ -252,6 +252,7 @@ body, html {
     align-items: center;
     justify-content: start;
     padding-top: 8% !important;
+
 }
 
 .slider-layer {
@@ -274,4 +275,85 @@ body, html {
     width: 100%;
     height: 5px;
     background: #f48232;
+}
+
+.logo-block{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+.logo-container{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.partners-outer-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.organizer-outer-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.partners-inner-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.partner-logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    flex-wrap: wrap;
+}
+
+.partner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.partner-logo img {
+    width: 120px;
+    display: block;
+}
+.partner{
+    color: #f48232;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.logo-link:hover{
+    cursor: pointer;
+}
+
+.arbel-logo img {
+    height: 50px;
+    display: block;
+}
+.mersin-logo-wrapper img{
+    width: 70px;
+}
+.aga-logo img{
+    width: 70px;
 }
