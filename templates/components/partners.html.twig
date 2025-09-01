@@ -4,7 +4,7 @@
 {% block title %}{{ 'button.partner'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_partner.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_partner.css') }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}
@@ -81,6 +81,16 @@
                     </a>
                     <a href="#" class="partner-logo">
                         <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                    </a>
+                </div>
+
+                <div class="partners-inner-wrapper">
+                    <div class="partner"><span class="cube"></span>GENERAL SPONSOR</div>
+                    <div class="line"></div>
+                </div>
+                <div class="partner-logo-wrapper arbel-logo-wrapper">
+                    <a href="https://www.agtfoods.com/about/divisions/turkiye" target="_blank" class="arbel-logo logo-link">
+                        <img src="{{ asset('logo/arbel_agt.png') }}" alt="gpc">
                     </a>
                 </div>
 

@@ -4,7 +4,7 @@
 {% block title %}{{ 'button.hotel'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_hotel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_hotel.css') }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}

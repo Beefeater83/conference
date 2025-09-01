@@ -4,7 +4,7 @@
 {% block title %}{{ 'button.contacts'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_contacts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_contacts.css') }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}

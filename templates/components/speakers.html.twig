@@ -4,7 +4,7 @@
 {% block title %}{{ 'button.speaker'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_speakers.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_speakers.css') }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}

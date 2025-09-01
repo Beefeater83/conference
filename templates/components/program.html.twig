@@ -4,7 +4,7 @@
 {% block title %}{{ 'button.program'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_program.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_program.css') }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}

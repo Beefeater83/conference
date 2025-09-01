@@ -171,13 +171,20 @@ body, html {
     cursor: pointer;
 }
 
+.arbel-logo img {
+    height: 100px;
+    display: block;
+}
+.arbel-logo-wrapper{
+    margin-top: 20px;
+}
+
 .mersin-logo-wrapper{
     margin-bottom: 20px;
 }
 
-
 @media (max-width: 800px){
-    .mersin-logo-wrapper{
+    .mersin-logo-wrapper {
         margin-bottom: 0;
     }
     .seeds-logo img, .aga-logo img{

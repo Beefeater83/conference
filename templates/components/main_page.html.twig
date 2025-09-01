@@ -4,7 +4,7 @@
 {% block title %}AgroFood Summit{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_main.css') }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}

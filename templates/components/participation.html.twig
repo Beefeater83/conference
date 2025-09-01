@@ -4,7 +4,7 @@
 {% block title %}{{ 'button.participation'|trans }}{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ asset('css/style_participation.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_participation.css') }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}
