@@ -5,10 +5,44 @@ body, html {
     padding: 0;
     font-family: "Montserrat", serif;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: white;
     position: relative;
     overflow-x: hidden;
+}
+.line-menu{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+    background: rgb(244, 130, 50);
+
+}
+.line-menu-btn{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.line-menu-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.line-menu-btn:hover::after {
+    width: 100%;
 }
 
 .logo-top{
@@ -24,47 +58,68 @@ body, html {
     z-index: 2;
 }
 
-.logo-wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-}
-.organizers-title{
-    font-size: 0.8em;
-    margin-top: 10px;
-}
-.logo img{
-    width: 120px;
-}
-
-.organizers-apk-beans{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-}
-
-.logo-apk:hover, .logo-soybean:hover{
-    cursor: pointer;
-}
-
 .event-info-wrapper{
     display: flex;
     width: 100%;
 }
-.event-place, .event-date-registration{
-    width: 35%;
-    margin-top: 10px;
+.event-place {
+    width: 35%;              /* оставляем как есть */
+    height: 70%;             /* оставляем как есть */
     display: flex;
     flex-direction: column;
-    height: 100%;
+    justify-content: center;
+    padding-left: 50px;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    font-size: 1em;
+    color: #222;
+}
+
+.date {
+    display: flex;
+    gap: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #f48232;          /* яркий акцент */
+    margin-bottom: 12px;
+}
+
+.date-first {
+    font-weight: 700;
+}
+
+.turkey {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.int-conf {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 6px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.international {
+    margin-top: 5px;
+    color: #f48232;
+}
+
+.conference {
+    color: #333;
+}
+
+.event-date-registration{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: center;
     align-items: center;
     letter-spacing: 2px;
     font-size: 1.1em;
-}
-.event-date-registration{
-    margin-top: 25px
 }
 
 .event-logo{
@@ -83,52 +138,60 @@ body, html {
     flex-direction: column;
 }
 
-.table{
-    border: 1px solid black;
-    font-size: 0.8em;
-    width: 50%;
+.table {
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    width: 280px;
     margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background: #fff;
 }
 
-.before-start{
-    border-bottom: 1px solid black;
+.before-start {
+    border-bottom: 1px solid #eee;
     text-align: center;
-    padding: 3px;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 1em;
+    color: #444;
+    background: #f7f7f7;
 }
 
-.day-month-wrapper{
+.day-month-wrapper {
     display: flex;
     flex-direction: row;
-    padding: 3px;
     width: 100%;
 }
 
-.month-wrapper, .days-wrapper{
-    width: 50%;
+.month-wrapper,
+.days-wrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-.date, .date-new{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 10px;
 }
 
-.date-first{
-    margin-right: 7px
+.month-wrapper {
+    border-right: 1px solid #eee;
 }
 
-.month-figure, .days-figure{
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: 600;
+.month-figure,
+.days-figure {
+    font-size: 2em;
+    font-weight: 700;
+    color: #f48232;
+    line-height: 1.2;
 }
 
-.month, .days{
-    text-align: center;
-    font-size: 0.8em;
+.month,
+.days {
+    font-size: 0.9em;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-wrapper {
@@ -170,6 +233,7 @@ body, html {
 
 .slider{
     position: absolute;
+    height: 250px;
     top: 220px;
     bottom: 0;
     left: 0;
@@ -198,327 +262,8 @@ body, html {
     opacity: 0;
 }
 
-.int-conf{
+.devider{
     width: 100%;
-    height: 50px;
-    font-size: 2.8em;
-    color: white;
-    text-align: center;
-    letter-spacing: 6px;
-    font-weight: 700;
+    height: 5px;
+    background: #f48232;
 }
-
-.bottom-wave{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 230px;
-    background: url("../icons/bottom.png") no-repeat top center;
-    background-size: 100% auto;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.bottom-menu-up{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 25px;
-    margin-left: 20px;
-}
-
-.bottom-menu-up > .btn-wrapper{
-    margin-right: 45px;
-}
-
-.bottom-menu-down{
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-}
-
-.bottom-menu-down .btn-wrapper{
-    margin-right: 20px;
-}
-
-@media (max-width: 1350px){
-    .bottom-wave{
-        height: 200px;
-    }
-    .bottom-menu-up{
-        margin-bottom: 15px;
-        margin-right: 10px;
-    }
-    .bottom-menu-down{
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 1024px){
-
-    .btn {
-        width: 140px;
-        height: 30px;
-        font-size: 0.8em;
-        letter-spacing: 1px;
-    }
-    .bottom-wave{
-        height: 180px;
-    }
-}
-@media (min-width: 2000px){
-    .event-date-registration{
-        justify-content: flex-start;
-        margin-top: 40px;
-    }
-    .logo-top{
-        height: 440px;
-    }
-    .logo img{
-        width: 170px;
-    }
-    .event-logo img{
-        width: 430px;
-    }
-    .date-new, .turkey-new{
-        font-size: 1.4em;
-    }
-    .table{
-        font-size: 1.1em;
-    }
-    .btn{
-        width: 170px;
-        height: 40px;
-    }
-    .bottom-wave{
-        height: 250px;
-    }
-    .slider{
-        padding-top: 13% !important;
-    }
-}
-
-
-@media (min-width: 2250px) and (max-width: 2849px){
-    .event-date-registration{
-        justify-content: flex-start;
-        margin-top: 20px;
-    }
-    .logo-top{
-        height: 460px;
-    }
-    .date-new, .turkey-new{
-        font-size: 1.6em;
-    }
-    .table{
-        font-size: 1.2em;
-    }
-    .bottom-wave{
-        height: 290px !important;
-    }
-    .btn{
-        width: 180px;
-        height: 40px;
-    }
-    .bottom-menu-up{
-        margin-bottom: 40px;
-        margin-right: 100px;
-    }
-    .bottom-menu-down{
-        margin-right: 70px;
-    }
-}
-
-@media (min-width: 2850px) and (max-width: 3500px){
-    .event-date-registration{
-        justify-content: flex-start;
-        margin-top: 20px;
-    }
-    .bottom-wave{
-        height: 300px !important;
-    }
-    .bottom-menu-up{
-        margin-right: 180px !important;
-    }
-    .logo-top{
-        height: 500px !important;
-    }
-    .event-logo img{
-        width: 500px;
-    }
-    .btn{
-        width: 200px;
-        height: 50px;
-    }
-    .date-new, .turkey-new{
-        font-size: 1.7em;
-    }
-    .table{
-        font-size: 1.3em;
-    }
-}
-
-
-@media (max-width: 950px) and (min-width: 801px){
-    .btn {
-        width: 115px;
-        height: 22px;
-        font-size: 0.7em;
-        letter-spacing: 1px;
-    }
-    .bottom-menu-up{
-        margin-right: 1px;
-    }
-    .bottom-menu-down{
-        margin-bottom: 10px;
-    }
-    .bottom-wave{
-        height: 150px;
-    }
-    .month, .days{
-        font-size: 0.6em;
-    }
-    
-    .date-first{
-        margin-right: 0;
-    }
-}
-@media (min-width: 801px) {
-    .turkey, .date{
-        display: none;
-    }
-}
-
-@media (max-width: 800px){
-    .date-new, .turkey-new, .logo-wrapper{
-        display: none;
-    }
-    .slider{
-        justify-content: center;
-    }
-    .bottom-menu-up{
-        display: none;
-    }
-    .bottom-menu-down{
-        display: none;
-    }
-    .bottom-wave{
-        display: none;
-    }
-    .event-info-wrapper{
-        padding-top: 30px;
-        align-items: center;
-    }
-    .event-place, .event-logo .event-date-registration{
-        width: 32%;
-    }
-    .event-place, .event-date-registration{
-        justify-content: center;
-        margin-top: 0;
-    }
-    .event-logo img{
-        width: 180px;
-    }
-    .logo-top{
-        height: 180px;
-    }
-
-    .month, .days{
-        font-size: 0.5em;
-    }
-    .before-start{
-        font-size: 0.9em;
-    }
-    .day-month-wrapper{
-        flex-direction: column;
-        align-items: center;
-    }
-    .table{
-        border: none;
-    }
-    .event-place{
-        font-size: 0.9em;
-        text-align: center;
-    }
-    .date{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .date-first{
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 600px){
-    .event-place{
-        font-size: 0.7em;
-    }
-    .btn{
-        width: 120px;
-        font-size: 0.7em;
-    }
-}
-
-@media (max-width: 500px){
-    .event-place{
-        font-size: 0.6em;
-    }
-    .event-logo img{
-        width: 160px;
-    }
-    .event-info-wrapper{
-        padding-top: 45px;
-    }
-    .slider{
-        top: 220px;
-    }
-    .before-start{
-        font-size: 0.8em;
-    }
-    .table{
-        width: 70%;
-    }
-    .int-conf{
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 450px){
-    .event-place{
-        font-size: 0.5em;
-    }
-    .event-logo img{
-        width: 150px;
-    }
-    .month, .days{
-        font-size: 0.4em;
-    }
-    .btn{
-        width: 100px;
-        font-size: 0.7em;
-        letter-spacing: 0;
-    }
-    .int-conf{
-        font-size: 1.5em;
-    }
-
-}
-
-@media(min-width: 801px) and (max-width: 1100px){
-    .int-conf{
-        font-size: 1.7em;
-    }
-}
-
-@media(min-width: 1101px) and (max-width: 1300px){
-
-    .int-conf{
-        font-size: 2em;
-    }
-}
-

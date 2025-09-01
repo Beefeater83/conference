@@ -8,45 +8,64 @@
 {% endblock %}
 
 {% block content %}
-    <div class="logo-top">
+    <div class="line-menu">
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.about'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.program'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper" style="display: none">
+            <a href="{{ path('speakers', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.speaker'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('partners', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.partner'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('download_sponsor_options') }}" class="line-menu-btn" title="Download PDF">
+                {{ 'button.sponsor_options'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('participation', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.participation'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.hotel'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.contacts'|trans }}
+            </a>
+        </div>
+    </div>
 
+    <div class="logo-top">
         <div class="event-info-wrapper">
             <div class="event-place">
-                <div class="logo-wrapper">
-                    <div class="organizers-title">ORGANIZERS</div>
-                    <div class="organizers-apk-beans">
-                        <div class="logo logo-apk" onclick="window.open('https://www.apk-inform.com/uk', '_blank')">
-                            <img src="{{ asset('logo/apk.svg') }}" alt="apk">
-                        </div>
-                        <div class="logo logo-soybean" onclick="window.open('https://ukraine-pulse.org', '_blank')">
-                            <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
-                        </div>
-                    </div>
-                    <div class="logo">
-                        <img src="{{ asset('logo/asia.svg') }}" alt="asia">
-                    </div>
-                    <div class="organizers-title">OFFICIAL PARTNER</div>
-                    <div class="logo logo-apk" onclick="window.open('https://globalpulses.com', '_blank')">
-                        <img src="{{ asset('logo/gpc.png') }}" alt="gpc">
-                    </div>
-                </div>
-
                 <div class="date">
                     <div class="date-first">{{ 'event.november'|trans }}</div>
                     <div>5-6-7, 2025</div>
                 </div>
                 <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
+                <div class="int-conf international">INTERNATIONAL</div>
+                <div class="int-conf conference">CONFERENCE</div>
             </div>
             <div class="event-logo">
                 <img src="{{ asset('logo/agrofood.svg') }}" alt="agrofood">
             </div>
             <div class="event-date-registration">
-                <div class="date-new">
-                    <div class="date-first">{{ 'event.november'|trans }}</div>
-                    <div>5-6-7, 2025</div>
-                </div>
-                <div class="turkey-new">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
-
                 <div class="table">
                     <div class="before-start">{{ 'event.before_start'|trans }}</div>
                     <div class="day-month-wrapper">
@@ -74,57 +93,13 @@
     <div class="slider">
         <div class="slider-layer" id="layer1"></div>
         <div class="slider-layer hidden" id="layer2"></div>
-        <div class="int-conf">INTERNATIONAL</div>
-        <div class="int-conf">CONFERENCE</div>
     </div>
+    <div class="devider"></div>
 
-    <div class="bottom-wave">
-        <div class="bottom-menu-up">
-            <div class="btn-wrapper">
-                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.about'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.program'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('speakers', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.speaker'|trans }}</button>
-                </a>
-            </div>
-        </div>
-        <div class="bottom-menu-down">
-            <div class="btn-wrapper">
-                <a href="{{ path('partners') }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.partner'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('download_sponsor_options') }}" class="btn" title="Download PDF">
-                    <button class="btn" type="button">{{ 'button.sponsor_options'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('participation', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.participation'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.hotel'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.contacts'|trans }}</button>
-                </a>
-            </div>
-        </div>
+    <div class="logo-block">
 
     </div>
+
 
 {% endblock %}
 
