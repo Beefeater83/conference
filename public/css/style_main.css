@@ -624,7 +624,7 @@ body, html {
    }
    .slider{
        margin-top: -60px;
-       height: 60vh;
+       height: 45vh;
    }
     .partner{
         font-size: 0.6em;
@@ -798,5 +798,37 @@ body, html {
     }
     .turkey, .date{
         letter-spacing: 0;
+    }
+}
+
+
+@media (max-width: 350px){
+    .event-logo img{
+        width: 100px;
+    }
+    .table{
+        width: 90px;
+        margin-bottom: 4px;
+    }
+    .before-start{
+        font-size: 0.8em;
+    }
+    .date{
+        font-size: 0.4em;
+        letter-spacing: 0;
+    }
+    .turkey{
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+        font-size: 0.5em;
+    }
+    .int-conf{
+        font-size: 0.5em;
+    }
+    .btn{
+        font-size: 0.6em;
+        font-weight: 600;
+        width: 100px;
+        height: 30px;
     }
 }
