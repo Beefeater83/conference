@@ -8,45 +8,64 @@
 {% endblock %}
 
 {% block content %}
-    <div class="logo-top">
+    <div class="line-menu">
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.about'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.program'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper" style="display: none">
+            <a href="{{ path('speakers', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.speaker'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('partners', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.partner'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('download_sponsor_options') }}" class="line-menu-btn" title="Download PDF">
+                {{ 'button.sponsor_options'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('participation', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.participation'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.hotel'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                {{ 'button.contacts'|trans }}
+            </a>
+        </div>
+    </div>
 
+    <div class="logo-top">
         <div class="event-info-wrapper">
             <div class="event-place">
-                <div class="logo-wrapper">
-                    <div class="organizers-title">ORGANIZERS</div>
-                    <div class="organizers-apk-beans">
-                        <div class="logo logo-apk" onclick="window.open('https://www.apk-inform.com/uk', '_blank')">
-                            <img src="{{ asset('logo/apk.svg') }}" alt="apk">
-                        </div>
-                        <div class="logo logo-soybean" onclick="window.open('https://ukraine-pulse.org', '_blank')">
-                            <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
-                        </div>
-                    </div>
-                    <div class="logo">
-                        <img src="{{ asset('logo/asia.svg') }}" alt="asia">
-                    </div>
-                    <div class="organizers-title">OFFICIAL PARTNER</div>
-                    <div class="logo logo-apk" onclick="window.open('https://globalpulses.com', '_blank')">
-                        <img src="{{ asset('logo/gpc.png') }}" alt="gpc">
-                    </div>
-                </div>
-
                 <div class="date">
                     <div class="date-first">{{ 'event.november'|trans }}</div>
                     <div>5-6-7, 2025</div>
                 </div>
                 <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
+                <div class="int-conf international">INTERNATIONAL</div>
+                <div class="int-conf conference">CONFERENCE</div>
             </div>
             <div class="event-logo">
                 <img src="{{ asset('logo/agrofood.svg') }}" alt="agrofood">
             </div>
             <div class="event-date-registration">
-                <div class="date-new">
-                    <div class="date-first">{{ 'event.november'|trans }}</div>
-                    <div>5-6-7, 2025</div>
-                </div>
-                <div class="turkey-new">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
-
                 <div class="table">
                     <div class="before-start">{{ 'event.before_start'|trans }}</div>
                     <div class="day-month-wrapper">
@@ -71,60 +90,92 @@
         </div>
     </div>
 
-    <div class="slider">
-        <div class="slider-layer" id="layer1"></div>
-        <div class="slider-layer hidden" id="layer2"></div>
-        <div class="int-conf">INTERNATIONAL</div>
-        <div class="int-conf">CONFERENCE</div>
-    </div>
+    <div class="content-wrapper">
+        <div class="slider">
+            <div class="slider-layer" id="layer1"></div>
+            <div class="slider-layer hidden" id="layer2"></div>
+        </div>
+        <div class="devider"></div>
 
-    <div class="bottom-wave">
-        <div class="bottom-menu-up">
-            <div class="btn-wrapper">
-                <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.about'|trans }}</button>
-                </a>
+        <div class="logo-block">
+            <div class="logo-container">
+                <div class="organizer-outer-wrapper">
+                    <div class="partners-inner-wrapper">
+                        <div class="partner">{{ 'about_content.organizers'|trans }}</div>
+                    </div>
+                    <div class="partner-logo-wrapper">
+                        <a href="https://www.apk-inform.com/uk" target="_blank" class="partner-logo logo-link">
+                            <img src="{{ asset('logo/apk.svg') }}" alt="apk">
+                        </a>
+                        <a href="https://ukraine-pulse.org" target="_blank" class="partner-logo logo-link">
+                            <img src="{{ asset('logo/soybean.svg') }}" alt="soybean">
+                        </a>
+                        <a href="#" class="partner-logo">
+                            <img src="{{ asset('logo/asia.svg') }}" alt="asia">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="partners-outer-wrapper">
+                    <div class="partners-inner-wrapper">
+                        <div class="partner">OFFICIAL PARTNER</div>
+                    </div>
+                    <div class="partner-logo-wrapper">
+                        <a href="https://globalpulses.com" target="_blank" class="partner-logo logo-link">
+                            <img src="{{ asset('logo/gpc.png') }}" alt="gpc">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('program', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.program'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('speakers', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.speaker'|trans }}</button>
-                </a>
+
+            <div class="logo-container">
+                <div class="partners-outer-wrapper">
+                    <div class="partners-inner-wrapper">
+                        <div class="partner">GENERAL SPONSOR</div>
+                    </div>
+                    <div class="partner-logo-wrapper arbel-logo-wrapper">
+                        <a href="https://www.agtfoods.com/about/divisions/turkiye" target="_blank" class="arbel-logo logo-link">
+                            <img src="{{ asset('logo/arbel_agt.png') }}" alt="gpc">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="partners-outer-wrapper">
+                    <div class="partners-inner-wrapper">
+                        <div class="partner">{{ 'partners.bronze_sponsor'|trans }}</div>
+                    </div>
+                    <div class="partner-logo-wrapper">
+                        <a href="https://atameken-agro.com/ru" target="_blank" class="partner-logo logo-link">
+                            <img src="{{ asset('logo/atameken.png') }}" alt="logo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="partners-outer-wrapper">
+                    <div class="partners-inner-wrapper">
+                        <div class="partner">PULSES SESSION SPONSOR</div>
+                    </div>
+                    <div class="partner-logo-wrapper mersin-logo-wrapper">
+                        <a href="https://mersintb.org.tr" target="_blank" class="partner-logo logo-link">
+                            <img src="{{ asset('logo/mersin_commodity.png') }}" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="partners-outer-wrapper">
+                    <div class="partners-inner-wrapper">
+                        <div class="partner">{{ 'partners.legal_sponsor'|trans }}</div>
+                    </div>
+                    <div class="partner-logo-wrapper">
+                        <a href="https://agalawyers.org/uk" target="_blank" class="partner-logo logo-link aga-logo">
+                            <img src="{{ asset('logo/aga.png') }}" alt="logo">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="bottom-menu-down">
-            <div class="btn-wrapper">
-                <a href="{{ path('partners') }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.partner'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('download_sponsor_options') }}" class="btn" title="Download PDF">
-                    <button class="btn" type="button">{{ 'button.sponsor_options'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('participation', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.participation'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('hotel', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.hotel'|trans }}</button>
-                </a>
-            </div>
-            <div class="btn-wrapper">
-                <a href="{{ path('contacts', {'_locale': app.request.locale}) }}" class="btn">
-                    <button class="btn" type="button">{{ 'button.contacts'|trans }}</button>
-                </a>
-            </div>
-        </div>
-
     </div>
+
+
 
 {% endblock %}
 
