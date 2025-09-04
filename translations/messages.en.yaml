@@ -21,9 +21,9 @@ button:
 about_content:
   organizers: "ORGANIZERS"
   summit:
-    intro: "<b>On November 5–7, 2025, the international AgroFood Summit 2025</b> will take place in <b>Mersin</b>, Türkiye, bringing together agribusiness professionals from all around the world."
+    intro: "<b>On November 19-21, 2025, the international AgroFood Summit 2025</b> will take place in <b>Mersin</b>, Türkiye, bringing together agribusiness professionals from all around the world."
     focus: "The summit will focus on the analysis of global and regional trends in grain, oilseed, and pulse markets; prospects for the development of agro-processing in Türkiye; as well as new logistics opportunities for the Black Sea region, the Middle East, North Africa, and Asia."
-    venue: "The venue will be the 5-star Radisson Hotel Mersin, whose modern conference hall will host over 500 participants, providing comfortable conditions for productive work and networking."
+    venue: "The venue will be the 5-star Divan Mersin Hotel, whose modern conference hall will host over 500 participants, providing comfortable conditions for productive work and networking."
   why_mersin:
     heading: "Why Mersin?"
     gateway: "Mersin is the agricultural gateway to the Eastern Mediterranean and a powerful agricultural and logistics hub."
@@ -50,7 +50,7 @@ about_content:
 hotel:
   about:
     heading: "About the hotel:"
-    paragraph: "📍 <b>Radisson Hotel Mersin 5*</b> is located in the very heart of Mersin, Türkiye, on the shore of the Mediterranean Sea, at <b>Gazi Mustafa Kemal Bulvarı No: 611, Mersin, 33140, Türkiye.</b>"
+    paragraph: "📍 <b>Divan Mersin Hotel 5*</b> is located in the very heart of Mersin, Türkiye, on the shore of the Mediterranean Sea, at <b>Akkent Mahallesi GMK Bulvarı No: 612 Yenişehir, Mersin/Turkey.</b>"
   advantages:
     heading: "Hotel advantages:"
     comfort: "<b>• Five-star comfort:</b> modern design, spacious rooms, some with panoramic sea views."
@@ -63,11 +63,11 @@ participation_terms:
   note_invoice: "The invoice for payment in the national currency will be issued at the current exchange rate on the date of invoicing."
   heading: "PARTICIPATION TERMS"
   nov5:
-    title: "* NOVEMBER 5"
+    title: "* NOVEMBER 19"
     description: "CEO Dinner (attendance is by invitation only and <b>not included in the ticket price</b>)."
   includes_heading: "THE TICKET PRICE INCLUDES:"
   nov6:
-    title: "NOVEMBER 6:"
+    title: "NOVEMBER 20:"
     items:
       1: "- Offline participation in the event for one company representative;"
       2: "- Welcome coffee, lunch, gala dinner;"
@@ -77,11 +77,11 @@ participation_terms:
       6: "- Presentations and event materials;"
       7: "- Simultaneous interpretation into Ukrainian, English, Turkish, and Russian."
   nov7:
-    title: "NOVEMBER 7"
+    title: "NOVEMBER 21"
     description: "Mersin port excursion;"
   photo_report:
     title: "PHOTO REPORT OF THE EVENT"
-    dates: "November 6–7"
+    dates: "November 19-21"
   note_accommodation: "*Accommodation at the hotel is not included in the ticket price."
   payment_terms:
     title: "Payment terms:"

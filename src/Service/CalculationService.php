@@ -11,7 +11,7 @@ class CalculationService
     public function getTimeUntilConference(): array
     {
         $now = new DateTime();
-        $conferenceDate = new DateTime('2025-11-05');
+        $conferenceDate = new DateTime('2025-11-19');
 
         if ($now > $conferenceDate) {
             return ['months' => '00', 'days' => '00'];
