@@ -88,6 +88,7 @@ participation_terms:
     description: "100% prepayment upon invoice issued by the organizer according to the participant’s application."
 
 partners:
-  media_partner: "MEDIA PARTNERS"
+  official_partner: "OFFICIAL PARTNER"
   bronze_sponsor: "BRONZE SPONSOR"
   legal_sponsor: "LEGAL SPONSOR"
+  general_sponsor: "GENERAL SPONSOR"

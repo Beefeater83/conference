@@ -9,6 +9,19 @@ body, html {
     background: white;
     position: relative;
 }
+/*
+@media (min-width: 801px) {
+    body.main-page .lang-wrapper {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1200;
+    }
+}
+body.main-page .lang-wrapper .lang{
+    color: #fff;
+}
+*/
 .line-menu{
     position: fixed;
     top: 0;
