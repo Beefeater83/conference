@@ -629,15 +629,12 @@ body.main-page .lang-wrapper .lang{
        width: 120px;
        height: 30px;
    }
-    .slider{
-        height: 60vh;
-    }
    .content-wrapper{
        margin-top: 190px;
    }
    .slider{
        margin-top: -60px;
-       height: 45vh;
+       height: 40vh;
    }
     .partner{
         font-size: 0.6em;
@@ -673,6 +670,7 @@ body.main-page .lang-wrapper .lang{
     }
     .event-info-wrapper{
         justify-content: center;
+        box-sizing: border-box;
     }
     .event-logo{
         padding-top: 3px;
@@ -770,9 +768,7 @@ body.main-page .lang-wrapper .lang{
    .registration{
        margin-bottom: 10px;
    }
-    .partner-logo img {
-        width: 75px;
-    }
+
     .aga-logo img{
         width: 50px;
     }
