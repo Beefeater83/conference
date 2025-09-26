@@ -50,7 +50,7 @@ about_content:
 hotel:
   about:
     heading: "About the hotel:"
-    paragraph: "📍 <b>Divan Mersin Hotel 5*</b> is located in the very heart of Mersin, Türkiye, on the shore of the Mediterranean Sea, at <b>Akkent Mahallesi GMK Bulvarı No: 612 Yenişehir, Mersin/Türkiye.</b>"
+    paragraph: "📍 <b><a href=\"https://www.divan.com.tr/otel/divan-mersin-otel\" target=\"_blank\" style=\"text-decoration: underline; color: inherit;\">Divan Mersin Hotel 5*</a></b> is located in the very heart of Mersin, Türkiye, on the shore of the Mediterranean Sea, at <b>Akkent Mahallesi GMK Bulvarı No: 612 Yenişehir, Mersin/Türkiye.</b>"
   advantages:
     heading: "Hotel advantages:"
     comfort: "<b>• Five-star comfort:</b> modern design, spacious rooms, some with panoramic sea views."
