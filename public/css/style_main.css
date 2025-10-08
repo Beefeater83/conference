@@ -335,7 +335,6 @@ body.main-page .lang-wrapper .lang{
     align-items: center;
     width: 100%;
     height: 50px;
-    flex-wrap: wrap;
 }
 
 .partner-logo {
@@ -369,6 +368,10 @@ body.main-page .lang-wrapper .lang{
 }
 .aga-logo img{
     width: 70px;
+}
+.msc-logo img{
+    height: 48px;
+    width: auto;
 }
 /* высота с slider от высоты экрана*/
 @media (min-height:675px){.slider{height:250px}}
@@ -544,6 +547,10 @@ body.main-page .lang-wrapper .lang{
     .aga-logo img{
         width: 50px;
     }
+    .msc-logo img{
+        height: 40px;
+        width: auto;
+    }
 }
 
 @media (max-width: 950px){
@@ -654,6 +661,10 @@ body.main-page .lang-wrapper .lang{
     .aga-logo img{
         width: 40px;
     }
+    .msc-logo img{
+        height: 35px;
+        width: auto;
+    }
 }
 @media (max-width: 700px){
     .event-logo img{
@@ -701,9 +712,6 @@ body.main-page .lang-wrapper .lang{
     .organizer-outer-wrapper{
         width: 400px;
     }
-    .partner-logo img {
-        width: 60px;
-    }
     .arbel-logo img {
         height: 30px;
     }
@@ -748,6 +756,10 @@ body.main-page .lang-wrapper .lang{
     }
     .aga-logo img{
         width: 40px;
+    }
+    .msc-logo img{
+        height: 30px;
+        width: auto;
     }
 }
 @media (max-width: 500px){

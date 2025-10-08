@@ -162,7 +162,7 @@ body, html {
     display: block;
 }
 
-.seeds-logo img, .aga-logo img{
+.seeds-logo img, .aga-logo img, .msc-logo img{
     height: 80px;
     width: auto;
 }
@@ -212,6 +212,10 @@ body, html {
         width: 240px;
         margin-bottom: 10px;
         margin-top: 10px;
+    }
+    .msc-logo img{
+        height: 80px;
+        width: auto;
     }
 }
 

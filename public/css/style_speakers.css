@@ -118,7 +118,7 @@ body, html {
 }
 .card-photo{
     width: 100%;
-    aspect-ratio: 3/4;
+   /* aspect-ratio: 3/4;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,9 +133,10 @@ body, html {
 
 .card-name{
     padding: 2px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
+    margin-top: 10px;
 }
 
 .card-position{
@@ -168,7 +169,7 @@ body, html {
         margin: 15px;
     }
     .card-name{
-        font-size: 11px;
+        font-size: 14px;
     }
     .card-position{
         font-size: 11px;
@@ -180,7 +181,7 @@ body, html {
         width: 150px;
     }
     .card-name{
-        font-size: 11px;
+        font-size: 13px;
     }
     .card-position{
         font-size: 11px;
