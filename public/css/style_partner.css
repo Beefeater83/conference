@@ -162,35 +162,11 @@ body, html {
     display: block;
 }
 
-.seeds-logo img, .aga-logo img, .msc-logo img{
-    height: 80px;
-    width: auto;
-}
-
 .logo-link:hover{
     cursor: pointer;
 }
 
-.arbel-logo img {
-    height: 100px;
-    display: block;
-}
-.arbel-logo-wrapper{
-    margin-top: 20px;
-}
-
-.mersin-logo-wrapper{
-    margin-bottom: 20px;
-}
-
 @media (max-width: 800px){
-    .mersin-logo-wrapper {
-        margin-bottom: 0;
-    }
-    .seeds-logo img, .aga-logo img{
-        height: auto;
-        width: 100px;
-    }
     .devider{
         display: none;
     }
@@ -212,10 +188,6 @@ body, html {
         width: 240px;
         margin-bottom: 10px;
         margin-top: 10px;
-    }
-    .msc-logo img{
-        height: 80px;
-        width: auto;
     }
 }
 
