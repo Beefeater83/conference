@@ -315,6 +315,10 @@ body.main-page .lang-wrapper .lang{
     margin-bottom: 20px;
 }
 
+.bronze-wrapper{
+    width: 263px;
+}
+
 .organizer-outer-wrapper{
     display: flex;
     flex-direction: column;
@@ -359,20 +363,6 @@ body.main-page .lang-wrapper .lang{
     cursor: pointer;
 }
 
-.arbel-logo img {
-    height: 50px;
-    display: block;
-}
-.mersin-logo-wrapper img{
-    width: 70px;
-}
-.aga-logo img{
-    width: 70px;
-}
-.msc-logo img{
-    height: 48px;
-    width: auto;
-}
 /* высота с slider от высоты экрана*/
 @media (min-height:675px){.slider{height:250px}}
 @media (min-height:775px){.slider{height:300px}}
@@ -400,15 +390,6 @@ body.main-page .lang-wrapper .lang{
     }
     .partner-logo img {
         width: 160px;
-    }
-    .arbel-logo img {
-        height: 70px;
-    }
-    .mersin-logo-wrapper img{
-        width: 100px;
-    }
-    .aga-logo img{
-        width: 85px;
     }
 }
 
@@ -443,15 +424,7 @@ body.main-page .lang-wrapper .lang{
     .partner-logo img {
         width: 180px;
     }
-    .arbel-logo img {
-        height: 90px;
-    }
-    .mersin-logo-wrapper img{
-        width: 120px;
-    }
-    .aga-logo img{
-        width: 100px;
-    }
+
     .partners-outer-wrapper, .organizer-outer-wrapper{
         margin-bottom: 30px;
     }
@@ -537,19 +510,6 @@ body.main-page .lang-wrapper .lang{
     }
     .partner-logo img {
         width: 100px;
-    }
-    .arbel-logo img {
-        height: 40px;
-    }
-    .mersin-logo-wrapper img{
-        width: 50px;
-    }
-    .aga-logo img{
-        width: 50px;
-    }
-    .msc-logo img{
-        height: 40px;
-        width: auto;
     }
 }
 
@@ -652,18 +612,8 @@ body.main-page .lang-wrapper .lang{
     .partner-logo img {
         width: 80px;
     }
-    .arbel-logo img {
-        height: 30px;
-    }
-    .mersin-logo-wrapper img{
-        width: 40px;
-    }
-    .aga-logo img{
-        width: 40px;
-    }
-    .msc-logo img{
+    .partner-logo-wrapper{
         height: 35px;
-        width: auto;
     }
 }
 @media (max-width: 700px){
@@ -712,15 +662,6 @@ body.main-page .lang-wrapper .lang{
     .organizer-outer-wrapper{
         width: 400px;
     }
-    .arbel-logo img {
-        height: 30px;
-    }
-    .mersin-logo-wrapper img{
-        width: 35px;
-    }
-    .aga-logo img{
-        width: 35px;
-    }
 }
 
 @media (max-width: 600px){
@@ -747,19 +688,6 @@ body.main-page .lang-wrapper .lang{
     }
     .partner-logo img {
         width: 70px;
-    }
-    .arbel-logo img {
-        height: 35px;
-    }
-    .mersin-logo-wrapper img{
-        width: 35px;
-    }
-    .aga-logo img{
-        width: 40px;
-    }
-    .msc-logo img{
-        height: 30px;
-        width: auto;
     }
 }
 @media (max-width: 500px){
