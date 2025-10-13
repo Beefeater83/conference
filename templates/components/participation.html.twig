@@ -82,12 +82,12 @@
                 </div>
                 <div class="table-body">
                     <div class="table-el">Standard</div>
-                    <div class="table-el">01.09-10.10</div>
+                    <div class="table-el">01.09-31.10</div>
                     <div class="table-el">850 USD</div>
                 </div>
                 <div class="table-body">
                     <div class="table-el">Business</div>
-                    <div class="table-el">11.10-19.11</div>
+                    <div class="table-el">01.11-19.11</div>
                     <div class="table-el">1000 USD</div>
                 </div>
             </div>
@@ -101,7 +101,9 @@
             <div class="about-heading"><span class="cube"></span>{{ 'participation_terms.heading'|trans }}</div>
 
             <div class="about-paragraph">
-                <b class="highlight-date">{{ 'participation_terms.nov5.title'|trans }}</b> – {{ 'participation_terms.nov5.description'|trans|raw }}
+                <b class="highlight-date">{{ 'participation_terms.nov5.title'|trans }}</b>
+                <div class="terms-list">– {{ 'participation_terms.nov5.description_factory'|trans|raw }}</div>
+                <div class="terms-list">– {{ 'participation_terms.nov5.description_dinner'|trans|raw }}</div>
             </div>
 
             <div class="about-heading">{{ 'participation_terms.includes_heading'|trans }}</div>
