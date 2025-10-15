@@ -301,7 +301,7 @@ body.main-page .lang-wrapper .lang{
 }
 
 .logo-container{
-    width: 60%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -311,18 +311,6 @@ body.main-page .lang-wrapper .lang{
     display: flex;
     flex-direction: column;
     width: 220px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.bronze-wrapper{
-    width: 263px;
-}
-
-.organizer-outer-wrapper{
-    display: flex;
-    flex-direction: column;
-    width: 450px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -338,7 +326,7 @@ body.main-page .lang-wrapper .lang{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 70px;
 }
 
 .partner-logo {
@@ -349,7 +337,7 @@ body.main-page .lang-wrapper .lang{
 }
 
 .partner-logo img {
-    width: 130px;
+    width: 200px;
     display: block;
 }
 .partner{
@@ -382,14 +370,11 @@ body.main-page .lang-wrapper .lang{
     .logo-top{
         height: 290px;
     }
-    .organizer-outer-wrapper{
-        width: 550px;
-    }
     .event-logo img{
         width: 280px;
     }
     .partner-logo img {
-        width: 160px;
+        width: 200px;
     }
 }
 
@@ -415,17 +400,14 @@ body.main-page .lang-wrapper .lang{
     .event-logo img{
         width: 320px;
     }
-    .organizer-outer-wrapper{
-        width: 600px;
-    }
     .partner{
         font-size: 1.2em;
     }
     .partner-logo img {
-        width: 180px;
+        width: 240px;
     }
 
-    .partners-outer-wrapper, .organizer-outer-wrapper{
+    .partners-outer-wrapper{
         margin-bottom: 30px;
     }
 }
@@ -505,11 +487,8 @@ body.main-page .lang-wrapper .lang{
     .partner{
         font-size: 0.7em;
     }
-    .organizer-outer-wrapper{
-        width: 400px;
-    }
     .partner-logo img {
-        width: 100px;
+        width: 130px;
     }
 }
 
@@ -606,9 +585,6 @@ body.main-page .lang-wrapper .lang{
     .partner{
         font-size: 0.6em;
     }
-    .organizer-outer-wrapper{
-        width: 400px;
-    }
     .partner-logo img {
         width: 80px;
     }
@@ -650,7 +626,7 @@ body.main-page .lang-wrapper .lang{
         font-size: 0.5em;
         margin-bottom: 20px;
     }
-    .organizer-outer-wrapper, .partners-outer-wrapper{
+    .partners-outer-wrapper{
         margin-bottom: 5px;
     }
     .slider{
@@ -658,9 +634,6 @@ body.main-page .lang-wrapper .lang{
     }
     .partner{
         font-size: 0.5em;
-    }
-    .organizer-outer-wrapper{
-        width: 400px;
     }
 }
 
@@ -682,9 +655,6 @@ body.main-page .lang-wrapper .lang{
     }
     .table{
         margin-bottom: 10px;
-    }
-    .logo-container{
-        width: 90%;
     }
     .partner-logo img {
         width: 70px;

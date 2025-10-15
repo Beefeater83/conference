@@ -154,12 +154,20 @@ body, html {
     align-items: center;
     text-decoration: none;
     margin-right: 50px;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
-.partner-logo img {
-    width: 150px;
-    display: block;
+@media (min-width: 801px) {
+    .partner-logo img {
+        width: 150px;
+        display: block;
+    }
+}
+@media (min-width: 1300px) {
+    .partner-logo img {
+        width: 250px;
+        display: block;
+    }
 }
 
 .logo-link:hover{
