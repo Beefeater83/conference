@@ -12,7 +12,7 @@ button:
   about: "ABOUT CONFERENCE"
   program: "PROGRAM"
   speaker: "SPEAKERS"
-  partner: "PARTNERS"
+  partner: "SPONSORS & PARTNERS"
   sponsor_options: "SPONSORSHIP & ADVERTISING"
   participation: "PARTICIPATION TERMS"
   hotel: "HOTEL"
@@ -23,7 +23,7 @@ about_content:
   summit:
     intro: "<b>On November 19-21, 2025, the international AgroFood Summit 2025</b> will take place in <b>Mersin</b>, Türkiye, bringing together agribusiness professionals from all around the world."
     focus: "The summit will focus on the analysis of global and regional trends in grain, oilseed, and pulse markets; prospects for the development of agro-processing in Türkiye; as well as new logistics opportunities for the Black Sea region, the Middle East, North Africa, and Asia."
-    venue: "The venue will be the 5-star Divan Mersin Hotel, whose modern conference hall will host over 500 participants, providing comfortable conditions for productive work and networking."
+    venue: "The venue will be the 5-star Divan Mersin Hotel, whose modern conference hall will host over 400 participants, providing comfortable conditions for productive work and networking."
   why_mersin:
     heading: "Why Mersin?"
     gateway: "Mersin is the agricultural gateway to the Eastern Mediterranean and a powerful agricultural and logistics hub."
