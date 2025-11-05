@@ -112,16 +112,11 @@ body.main-page .lang-wrapper .lang{
 }
 
 .int-conf {
-    font-size: 1.8em;
-    font-weight: 600;
-    letter-spacing: 6px;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.international {
-    margin-top: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
     color: #000;
+    text-transform: uppercase;
 }
 
 .conference {
@@ -461,6 +456,13 @@ body.main-page .lang-wrapper .lang{
     .slider{
         height: 170px;
     }
+    .date{
+        margin-bottom: 0;
+    }
+    .line-menu-btn{
+        padding: 5px 5px;
+        font-size: 0.8em;
+    }
 }
 @media (max-width: 1000px){
     .event-logo img{
@@ -500,7 +502,8 @@ body.main-page .lang-wrapper .lang{
         height: 210px;
     }
     .int-conf{
-        font-size: 1em;
+        font-size: 0.8em;
+        margin-bottom: 12px;
     }
     .event-date-registration, .event-place{
         height: 80%;
@@ -513,10 +516,6 @@ body.main-page .lang-wrapper .lang{
         font-weight: 500;
         font-size: 0.9em;
     }
-    .line-menu-btn{
-        padding: 5px 5px;
-        font-size: 0.8em;
-    }
 }
 
 @media (max-width: 850px){
@@ -527,7 +526,7 @@ body.main-page .lang-wrapper .lang{
         height: 210px;
     }
     .int-conf{
-        font-size: 1em;
+        font-size: 0.7em;
     }
     .event-date-registration, .event-place{
         height: 80%;
@@ -558,7 +557,8 @@ body.main-page .lang-wrapper .lang{
         height: 190px;
     }
     .int-conf{
-        font-size: 0.7em;
+        font-size: 0.6em;
+        margin-bottom: 5px;
     }
     .date, .turkey{
         font-size: 0.7em;
@@ -645,7 +645,6 @@ body.main-page .lang-wrapper .lang{
     .event-place{
         justify-content: flex-end;
         height: 100%;
-        padding-bottom: 20px;
     }
     .event-logo img{
         width: 160px;
@@ -686,7 +685,6 @@ body.main-page .lang-wrapper .lang{
         height: 140px;
     }
     .turkey{
-        margin-bottom: 25px;
         letter-spacing: 1px;
     }
     .date{
@@ -695,6 +693,7 @@ body.main-page .lang-wrapper .lang{
     }
     .int-conf{
         font-size: 0.6em;
+        letter-spacing: 1px;
     }
     .table{
         width: 100px;
@@ -737,7 +736,6 @@ body.main-page .lang-wrapper .lang{
         letter-spacing: 0;
     }
     .turkey{
-        margin-bottom: 25px;
         letter-spacing: 1px;
         font-size: 0.5em;
     }
