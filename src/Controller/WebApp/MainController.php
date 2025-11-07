@@ -151,4 +151,11 @@ class MainController extends AbstractController
 
         return $this->redirectToRoute('admin', ['_locale' => $request->getLocale()]);
     }
+
+    #[Route('/{_locale}/participants-list', name: 'participants', requirements: ['_locale' => 'en|ru|ua'], defaults: ['_locale' => 'en'], methods: ['GET'])]
+    public function participants(Request $request): Response
+    {
+
+        return $this->render('components/participants.html.twig', []);
+    }
 }

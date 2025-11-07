@@ -59,8 +59,15 @@
                     <div>19-21, 2025</div>
                 </div>
                 <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
-                <div class="int-conf international">INTERNATIONAL</div>
-                <div class="int-conf conference">CONFERENCE</div>
+                <div class="int-conf">INTERNATIONAL CONFERENCE</div>
+                <div class="registration">
+                    <div class="btn-wrapper">
+                        <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="btn">
+                            <button class="btn reg-btn" type="button">PARTICIPANTS LIST</button>
+                        </a>
+                    </div>
+                </div>
+
             </div>
             <div class="event-logo">
                 <img src="{{ asset('logo/agrofood.svg') }}" alt="agrofood">
