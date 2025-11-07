@@ -34,6 +34,11 @@
         <div class="registration-main">
             <div class="line-menu">
                 <div class="btn-wrapper">
+                    <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="btn">
+                        PARTICIPANTS LIST
+                    </a>
+                </div>
+                <div class="btn-wrapper">
                     <a href="{{ path('main_page', {'_locale': app.request.locale}) }}" class="btn">
                         {{ 'button.main_page'|trans }}
                     </a>

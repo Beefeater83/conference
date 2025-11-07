@@ -10,6 +10,11 @@
 {% block content %}
     <div class="line-menu">
         <div class="line-menu-btn-wrapper">
+            <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                PARTICIPANTS LIST
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
             <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="line-menu-btn">
                 {{ 'button.about'|trans }}
             </a>
