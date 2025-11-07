@@ -33,11 +33,7 @@
 
         <div class="about-main">
             <div class="line-menu">
-                <div class="btn-wrapper">
-                    <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="btn">
-                        PARTICIPANTS LIST
-                    </a>
-                </div>
+
                 <div class="btn-wrapper">
                     <a href="{{ path('main_page', {'_locale': app.request.locale}) }}" class="btn">
                         {{ 'button.main_page'|trans }}
@@ -61,6 +57,11 @@
                 <div class="btn-wrapper">
                     <a href="{{ path('partners', {'_locale': app.request.locale}) }}" class="btn">
                         {{ 'button.partner'|trans }}
+                    </a>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="btn">
+                        PARTICIPANTS LIST
                     </a>
                 </div>
 

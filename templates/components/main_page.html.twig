@@ -9,11 +9,7 @@
 
 {% block content %}
     <div class="line-menu">
-        <div class="line-menu-btn-wrapper">
-            <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="line-menu-btn">
-                PARTICIPANTS LIST
-            </a>
-        </div>
+
         <div class="line-menu-btn-wrapper">
             <a href="{{ path('about_conference', {'_locale': app.request.locale}) }}" class="line-menu-btn">
                 {{ 'button.about'|trans }}
@@ -32,6 +28,11 @@
         <div class="line-menu-btn-wrapper">
             <a href="{{ path('partners', {'_locale': app.request.locale}) }}" class="line-menu-btn">
                 {{ 'button.partner'|trans }}
+            </a>
+        </div>
+        <div class="line-menu-btn-wrapper">
+            <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="line-menu-btn">
+                PARTICIPANTS LIST
             </a>
         </div>
 
@@ -62,7 +63,7 @@
                 <div class="turkey">{{ 'event.mersin'|trans }}, {{ 'event.turkey'|trans }}</div>
                 <div class="int-conf">INTERNATIONAL CONFERENCE</div>
                 <div class="registration">
-                    <div class="btn-wrapper">
+                    <div class="btn-wrapper" style="visibility: hidden">
                         <a href="{{ path('participants', {'_locale': app.request.locale}) }}" class="btn">
                             <button class="btn reg-btn" type="button">PARTICIPANTS LIST</button>
                         </a>
