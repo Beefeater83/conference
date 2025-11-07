@@ -85,7 +85,7 @@ class MainController extends AbstractController
 
         return $this->render('components/partners.html.twig', []);
     }
-
+/*
     #[Route('/download/sponsor-options', name: 'download_sponsor_options')]
     public function downloadSponsorOptions(): BinaryFileResponse
     {
@@ -99,7 +99,7 @@ class MainController extends AbstractController
 
         return $response;
     }
-
+*/
     #[Route('/{_locale}/admin', name: 'admin', requirements: ['_locale' => 'en|ru|ua'], defaults: ['_locale' => 'en'], methods: ['GET'])]
     public function admin(Request $request, ClientRegistry $clientRegistry): Response
     {
